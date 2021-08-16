@@ -9,18 +9,18 @@
         background-color: $main-color;
         color: #fff;
     }
-    
+
     &__logo {
         width: 30%;
         display: flex;
         justify-content: flex-start;
         align-items: center;
-    
+
         &-img {
             width: 40px;
             height: 46px;
         }
-    
+
         &-text {
             font-size: 20px;
             font-weight: 500;
@@ -29,9 +29,9 @@
             margin-left: 22px;
         }
     }
-    
+
     &__info {
-    
+
         &-addres,
         &-phone {
             font-weight: normal;
@@ -40,24 +40,24 @@
             letter-spacing: 0.03em;
             text-align: center;
         }
+
         &-phone {
             font-size: 16px;
         }
     }
-    
+
     &__social {
         width: 30%;
         display: flex;
         justify-content: flex-end;
     }
+
     &__image {
         width: 100%;
         height: 250px;
         background: url('../img/header-bg.jpg') center center / cover no-repeat;
     }
 }
-
-
 
 .social__icon {
     width: 32px;
@@ -70,14 +70,66 @@
     font-size: 22px;
     color: #fff;
     text-decoration: none;
+
     &-ok {
         background-color: #EB722E;
     }
+
     &-vk {
         background-color: #48729E;
     }
+
     &-ig {
         background-color: #D72D76;
     }
 }
 
+.header__bottom {
+    width: 100%;
+    height: 48px;
+    background-color: $main-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+
+    &-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-icon {
+        width: 32px;
+        height: 32px;
+        margin-right: 15px;
+        cursor: pointer;
+        &:hover {
+            svg path {
+                fill: $sec-color;
+                box-shadow: 0 0 10px 5px $sec-color;
+            }
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.search__btn {
+    width: 48px;
+    height: 24px;
+    border-radius: 4px;
+}
+
+.search__text {
+	width: 255px;
+	height: 24px;
+	border-radius: 4px;
+	margin-right: 15px;
+    font-size: 16px;
+    padding: 0px 18px;
+}
