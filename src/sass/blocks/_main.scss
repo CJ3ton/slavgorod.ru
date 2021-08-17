@@ -1,13 +1,15 @@
 .main {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    & .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
 
     &__left {
-        width: 255px;
+        width: 265px;
     }
 
     &__right {
-        width: 255px;
+        width: 265px;
     }
 }

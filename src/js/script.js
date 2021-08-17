@@ -1,18 +1,17 @@
-const hamburger = document.querySelector('.hamburger'),
-    menu = document.querySelector('.menu'),
-    closeMenu = document.querySelector('.menu__close');
-
-hamburger.addEventListener('click', () => {
-    menu.classList.add('active');
-})
-
-closeMenu.addEventListener('click', () => {
-    menu.classList.remove('active');
-})
-
-const counters = document.querySelectorAll('.skills__ratings-counter'),
-    lines = document.querySelectorAll('.skills__ratings-line span');
-
-counters.forEach((item, i) => {
-    lines[i].style.width = item.innerHTML;
-})
+$(document).ready(function () {
+    $('.main__slider').slick({
+        speed: 1200,
+        autoplay: true,
+        dots: true,
+        slide: '.main__slider-slide',
+        prevArrow: '<button type="button" class="slick-prev"><img src="icons/arrow-left.png" alt="Prev"</button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="icons/arrow-right.png" alt="Next"</button>',
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                dots: true,
+                arrows: false
+            }
+        }]
+    });
+});
