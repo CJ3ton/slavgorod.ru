@@ -1,0 +1,13 @@
+.main {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    &__left {
+        width: 255px;
+    }
+
+    &__right {
+        width: 255px;
+    }
+}
