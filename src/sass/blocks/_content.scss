@@ -1,10 +1,56 @@
 .main {
     &__content {
         padding: 5px;
+
+        &-title {
+            margin-top: 37px;
+            background-color: $main-color;
+            height: 40px;
+            color: #fff;
+            font-size: 18px;
+            line-height: 40px;
+            font-weight: 500;
+            padding-left: 25px;
+            text-transform: uppercase;
+        }
+
+        &-news {
+            margin-top: 5px;
+            &-item {
+                margin-top: 15px;
+                &-date {
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: $main-color;
+                }
+                &-text {
+                    font-size: 16px;
+                    letter-spacing: .01rem;
+                    font-weight: 400;
+                    margin-top: 5px;
+                    & a {
+                        color: #555;
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: underline;
+                            color: $main-color;
+                        }
+                    }
+                }
+            }
+            &-all {
+                margin-top: 20px;
+                & a {
+                    color: $main-color;
+                }
+            }
+        }
     }
+
+
     &__slider {
         width: 600px;
         height: 300px;
+        box-shadow: 0px 0px 7px #333;
     }
 }
-

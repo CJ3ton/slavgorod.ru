@@ -1,8 +1,7 @@
 .main {
     & .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
+        display: grid;
+        grid-template-columns: 265px auto 265px;
     }
 
     &__left {

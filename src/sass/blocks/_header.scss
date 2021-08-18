@@ -8,10 +8,13 @@
         align-items: center;
         background-color: $main-color;
         color: #fff;
+        &>a:nth-child(1) {
+            display: block;
+            width: 33%;
+        }
     }
 
     &__logo {
-        width: 30%;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -27,6 +30,7 @@
             line-height: 23px;
             letter-spacing: 0.03em;
             margin-left: 22px;
+            color: #fff;
         }
     }
 
@@ -47,7 +51,7 @@
     }
 
     &__social {
-        width: 30%;
+        width: 33%;
         display: flex;
         justify-content: flex-end;
     }
