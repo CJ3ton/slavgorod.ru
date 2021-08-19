@@ -14,4 +14,18 @@ $(document).ready(function () {
             }
         }]
     });
+
+    $('.footer__slider').slick({
+        slidesToShow: 5,
+        speed: 1200,
+        autoplay: true,
+        arrows: false,
+        slide: '.footer__slider-slide',
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 4
+            }
+        }]
+    });
 });

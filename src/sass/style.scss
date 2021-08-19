@@ -20,8 +20,14 @@ body {
     background-color: #fff;
 }
 
+.social {
+    display: flex;
+    justify-content: flex-end;
+}
+
 @import 'blocks/header';
 @import 'blocks/main';
 @import 'blocks/left-sidebar';
 @import 'blocks/content';
 @import 'blocks/right-sidebar';
+@import 'blocks/footer';
