@@ -1,5 +1,6 @@
 $(document).ready(function () {
     $('.main__slider').slick({
+        mobileFirst: true,
         speed: 1200,
         autoplay: true,
         dots: true,

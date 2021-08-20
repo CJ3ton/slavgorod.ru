@@ -25,9 +25,46 @@ body {
     justify-content: flex-end;
 }
 
+.hr {
+    height: 1px;
+    background-color: $main-color;
+    margin: 5px 10px 10px;
+}
+
+.copyright {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: right;
+    padding: 0 10px;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: 500;
+    color: $main-color;
+}
+
+.ya-share2__container_size_m .ya-share2__badge .ya-share2__icon {
+    height: 32px !important;
+    width: 32px !important;
+    background-size: 32px 32px !important;
+}
+
+.ya-share2__container_size_m .ya-share2__title {
+	line-height: 32px !important;
+}
+
+.ya-share2__container_size_m .ya-share2__item_more .ya-share2__icon_more {
+    background-size: 24px 24px !important;
+}
+
 @import 'blocks/header';
 @import 'blocks/main';
 @import 'blocks/left-sidebar';
 @import 'blocks/content';
 @import 'blocks/right-sidebar';
+@import 'blocks/single';
 @import 'blocks/footer';
+@import 'blocks/photorep';
