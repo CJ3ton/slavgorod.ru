@@ -1,0 +1,36 @@
+.hamburger {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    height: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    cursor: pointer;
+    visibility: hidden;
+    width: 30px;
+    span {
+        width: 30px;
+        height: 3px;
+        background: #FFFFFF;
+        display: block;
+        transition: .5s all;
+    }
+}
+
+.hamburger_active span {
+    margin-bottom: -2px
+}
+
+.hamburger_active span:nth-child(1) {
+    transform: translateY(16px) rotate(-45deg)
+}
+
+.hamburger_active span:nth-child(2) {
+    display: none
+}
+
+.hamburger_active span:nth-child(3) {
+    transform: translateY(-4px) rotate(45deg)
+}

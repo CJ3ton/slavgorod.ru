@@ -5,17 +5,29 @@
         margin-top: 8px;
         width: 265px;
         height: 67px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         box-shadow: 0px 10px 10px -5px #555;
         transition: 100ms;
+
+        & a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+        }
+
         &:hover {
             box-shadow: 0px 12px 10px -5px #555;
+            
+
+            & a>.main__right-button-text {
+                color: $sec-color;
+            }
         }
+
         &:active {
             box-shadow: 0px 5px 7px -5px #555;
         }
+
         &-image {
             width: 98px;
             height: 60px;
@@ -23,19 +35,14 @@
 
         &-text {
             width: 167px;
-            & a {
-                display: block;
-                font-family: Roboto Condensed;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 19px;
-                color: $main-color;
-                text-decoration: none;
-                text-align: center;
-                &:hover {
-                    color: $sec-color;
-                }
-            }
+            display: block;
+            font-family: Roboto Condensed;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: $main-color;
+            text-decoration: none;
+            text-align: center;
         }
     }
 }
@@ -53,12 +60,15 @@
         box-shadow: 0px 10px 10px -5px #555;
         transition: 100ms;
         cursor: pointer;
+
         &:hover {
             box-shadow: 0px 12px 10px -5px #555;
         }
+
         &:active {
             box-shadow: 0px 5px 7px -5px #555;
         }
+
         &-image {
             width: 98px;
             height: 60px;
@@ -71,7 +81,7 @@
 }
 
 .banner__pos-small {
-	display: flex;
-	justify-content: center;
-	margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
 }
