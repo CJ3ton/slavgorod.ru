@@ -209,11 +209,37 @@
     }
 
     .header {
+        &__bottom {
+            flex-direction: column;
+            gap: 14px;
+            padding: 10px 32px 15px 32px;
+            transition: all .5s;
+
+            &.expanded {
+                height: 94px;
+            }
+
+            &-expand {
+                display: block;
+                font-size: 24px;
+                position: absolute;
+                right: -30px;
+                color: #fff;
+
+                & i {
+                    transition: all 0.4s ease;
+                }
+
+                &.open i {
+                    transform: rotate(180deg);
+                }
+            }
+        }
 
     }
 
     .search__text {
-        display: none;
+        width: 50vw;
     }
 
     .main {
@@ -226,6 +252,7 @@
             &-button {
                 width: 360px;
                 margin: 10px auto;
+
                 &-text {
                     display: block;
                 }
@@ -243,6 +270,7 @@
             &-button {
                 width: 360px;
                 margin: 10px auto;
+
                 &-text {
                     display: block;
                 }
@@ -257,7 +285,9 @@
             gap: 15px;
         }
 
-        &__left,  &__mid, &__right{
+        &__left,
+        &__mid,
+        &__right {
             width: 100%;
         }
 
@@ -273,6 +303,7 @@
 
         &__social {
             width: 100%;
+
             & .social {
                 justify-content: center;
             }
@@ -285,6 +316,26 @@
     .container {
         max-width: 100%;
         padding: 0 10px;
+    }
+
+    .header {
+        &__top {
+            padding: 0 10px;
+        }
+        &__logo {
+            &-text {
+                margin-left: 12px;
+            }
+        }
+        &__social {
+            display: none;
+        }
+        &__bottom {
+            padding: 10px 15px;
+            &-nav {
+                align-self: flex-start;
+            }
+        }
     }
 
 }

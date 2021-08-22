@@ -1,11 +1,13 @@
 const hamburger = document.querySelector('.hamburger'),
     menu = document.querySelector('.main__menu'),
     menuItem = document.querySelectorAll('.menu__link'),
+    bottom = document.querySelector('.header__bottom'),
+    expand = document.querySelector('.header__bottom-expand'),
     overlay = document.querySelector('.overlay');
 
 $(document).ready(function () {
     $('.main__slider').slick({
-        speed: 1200,
+        speed: 2000,
         autoplay: true,
         dots: true,
         slide: '.main__slider-slide',
@@ -27,17 +29,30 @@ $(document).ready(function () {
         arrows: false,
         slide: '.footer__slider-slide',
         responsive: [{
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 4
-            }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 3
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4
+                }
             },
-        }]
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 320,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
     initMenu();
@@ -58,6 +73,11 @@ function initMenu() {
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('hamburger_active');
     menu.classList.toggle('open');
+});
+
+expand.addEventListener('click', () => {
+    bottom.classList.toggle('expanded');
+    expand.classList.toggle('open');
 });
 
 menuItem.forEach(item => {
