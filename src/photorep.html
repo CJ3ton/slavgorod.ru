@@ -41,6 +41,11 @@
                             class="social__icon social__icon-ig"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                     </div>
                 </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
 
             <div class="header__image"></div>
@@ -98,6 +103,7 @@
                                 fill="white" />
                         </svg>
                     </a>
+                    <div class="header__bottom-expand"><i class="fas fa-chevron-down"></i></div>
                 </div>
                 <form action="" class="header__bottom-search">
                     <input type="text" class="search__text" name="search" id="search" placeholder="Поиск">
@@ -111,8 +117,8 @@
         <div class="container">
             <div class="single__left">
                 <nav class="main__menu">
-                    <ul class="menu">
-                        <li class="menu-item"><a href="#">Город</a>
+                    <ul class="menu" id="menu">
+                        <li class="menu-item dropdown"><a href="#">Город</a><i class="fas fa-chevron-down"></i>
                             <ul class="submenu">
                                 <li class="submenu-item"><a href="<?=PATH?>/gorod/">О городе</a></li>
                                 <li class="submenu-item"><a href="<?=PATH?>/ustav/">Устав</a></li>
@@ -120,7 +126,7 @@
                                 <li class="submenu-item"><a href="<?=PATH?>/piple/">Почетные граждане города</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="#">Администрация</a>
+                        <li class="menu-item dropdown"><a href="#">Администрация</a><i class="fas fa-chevron-down"></i>
                             <ul class="submenu">
                                 <li class="submenu-item"><a href="<?=PATH?>/structura/">Структура администрации</a></li>
                                 <li class="submenu-item"><a href="<?=PATH?>/page_266.html">Глава муниципального
@@ -147,7 +153,7 @@
                                 <li class="submenu-item"><a href="<?=PATH?>/page_480.html">Присяжные заседатели</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="#">Глава города</a>
+                        <li class="menu-item dropdown"><a href="#">Глава города</a><i class="fas fa-chevron-down"></i>
                             <ul class="submenu">
                                 <li class="submenu-item"><a href="<?=PATH?>/page_208.html">Постановления главы
                                         города</a></li>
@@ -155,7 +161,8 @@
                                         города</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="#">Городское Собрание депутатов</a>
+                        <li class="menu-item dropdown"><a href="#">Городское Собрание депутатов</a><i
+                                class="fas fa-chevron-down"></i>
                             <ul class="submenu">
                                 <li class="submenu-item"><a href="<?=PATH?>/gsd/">Общая информация</a></li>
                                 <li class="submenu-item"><a href="<?=PATH?>/page_276.html">Депутаты</a></li>
@@ -189,7 +196,7 @@
                             <a href="<?=PATH?>/upr-del/">Управление делами</a>
                         </li>
 
-                        <li class="menu-item">
+                        <li class="menu-item dropdown"><i class="fas fa-chevron-down"></i>
                             <a href="#">Образование</a>
                             <ul class="submenu">
                                 <li class="submenu-item"><a href="<?=PATH?>/kom_obrazovanie/">Комитет по образованию</a>
@@ -203,7 +210,8 @@
                             <a href="<?=PATH?>/page_418.html">Комитет по культуре, спорту и молодежной политике</a>
                         </li>
 
-                        <li class="menu-item"><a href="#">Здравоохранение</a>
+                        <li class="menu-item dropdown"><a href="#">Здравоохранение</a><i
+                                class="fas fa-chevron-down"></i>
                             <ul class="submenu">
                                 <li class="submenu-item"><a href="<?=PATH?>/crb/">Центральная районная больница</a></li>
                                 <li class="submenu-item"><a target="_blank"
@@ -217,7 +225,8 @@
                                 <li class="submenu-item"><a href="<?=PATH?>/health/">Будь здоров!</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="#">Социальное обеспечение</a>
+                        <li class="menu-item dropdown"><a href="#">Социальное обеспечение</a><i
+                                class="fas fa-chevron-down"></i>
                             <ul class="submenu">
                                 <li class="submenu-item"><a href="<?=PATH?>/coczzashita/">Управление социальной защиты
                                         населения</a></li>
@@ -229,7 +238,8 @@
                                 <li class="submenu-item"><a href="<?=PATH?>/pfrf/">Пенсионный фонд</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="#">Труд и занятость</a>
+                        <li class="menu-item dropdown"><a href="#">Труд и занятость</a><i
+                                class="fas fa-chevron-down"></i>
                             <ul class="submenu">
                                 <li class="submenu-item"><a href="<?=PATH?>/page_441.html">Работодателям</a></li>
                                 <li class="submenu-item"><a href="<?=PATH?>/socpart/">Социальное партнерство</a></li>
@@ -241,7 +251,7 @@
                         <li class="menu-item">
                             <a href="<?=PATH?>/page_233.html">Легализация занятости</a>
                         </li>
-                        <li class="menu-item"><a href="#">Архивный отдел</a>
+                        <li class="menu-item dropdown"><a href="#">Архивный отдел</a><i class="fas fa-chevron-down"></i>
                             <ul class="submenu">
                                 <li class="submenu-item"><a href="<?=PATH?>/page_217.html">Сведения об отделе</a></li>
                                 <li class="submenu-item"><a href="<?=PATH?>/page_218.html">Информация о фондах</a></li>
@@ -257,7 +267,8 @@
                             <a href="<?=PATH?>/page_197.html">Предпринимательство</a>
                         </li>
 
-                        <li class="menu-item"><a href="#">Финансы и бюджет</a>
+                        <li class="menu-item dropdown"><a href="#">Финансы и бюджет</a><i
+                                class="fas fa-chevron-down"></i>
                             <ul class="submenu">
                                 <li class="submenu-item"><a href="<?=PATH?>/page_193.html">Комитет по финансам</a></li>
                                 <li class="submenu-item"><a href="<?=PATH?>/page_262.html">Бюджет для граждан</a></li>
@@ -274,7 +285,7 @@
                             </ul>
                         </li>
 
-                        <li class="menu-item"><a href="#">Экономика</a>
+                        <li class="menu-item dropdown"><a href="#">Экономика</a><i class="fas fa-chevron-down"></i>
                             <ul class="submenu">
                                 <li class="submenu-item"><a href="<?=PATH?>/page_195.html">Социально-экономическое
                                         развитие
@@ -294,7 +305,8 @@
                         <li class="menu-item">
                             <a href="<?=PATH?>/page_544.html">Оценка регулирующего воздействия</a>
                         </li>
-                        <li class="menu-item"><a href="#">Комитет по ЖКХ и экологии</a>
+                        <li class="menu-item dropdown"><a href="#">Комитет по ЖКХ и экологии</a><i
+                                class="fas fa-chevron-down"></i>
                             <ul class="submenu">
                                 <li class="submenu-item"><a href="<?=PATH?>/page_472.html">Сведения о председателе
                                         Комитета, список
@@ -329,7 +341,8 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="#">Комитет по имущественным отношениям</a>
+                        <li class="menu-item dropdown"><a href="#">Комитет по имущественным отношениям</a><i
+                                class="fas fa-chevron-down"></i>
                             <ul class="submenu">
                                 <li class="submenu-item"><a href="<?=PATH?>/page_239.html">Сведения о председателе
                                         комитета, список
@@ -350,7 +363,8 @@
                                 <li class="submenu-item"><a href="<?=PATH?>/page_574.html">Кадастровая оценка</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="#">Комитет по сельскому хозяйству</a>
+                        <li class="menu-item dropdown"><a href="#">Комитет по сельскому хозяйству</a><i
+                                class="fas fa-chevron-down"></i>
                             <ul class="submenu">
                                 <li class="submenu-item"><a href="<?=PATH?>/page_473.html">Сведения о председателе
                                         Комитета, список
@@ -360,7 +374,8 @@
                                 <li class="submenu-item"><a href="<?=PATH?>/ush/">Новости</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="#">Комитет градостроительства и архитектуры</a>
+                        <li class="menu-item dropdown"><a href="#">Комитет градостроительства и архитектуры</a><i
+                                class="fas fa-chevron-down"></i>
                             <ul class="submenu">
                                 <li class="submenu-item"><a href="<?=PATH?>/page_475.html">Сведения о председателе
                                         Комитета, список
@@ -372,7 +387,8 @@
                         <li class="menu-item">
                             <a href="<?=PATH?>/page_612.html">Градостроительство</a>
                         </li>
-                        <li class="menu-item"><a href="#">Комиссия по делам несовершеннолетних</a>
+                        <li class="menu-item dropdown"><a href="#">Комиссия по делам несовершеннолетних</a><i
+                                class="fas fa-chevron-down"></i>
                             <ul class="submenu">
                                 <li class="submenu-item"><a href="<?=PATH?>/kdn/">Информация</a></li>
                                 <li class="submenu-item"><a href="<?=PATH?>/kdndoc/">Работа комиссий по делам
@@ -381,7 +397,8 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="#">Государственные и муниципальные услуги</a>
+                        <li class="menu-item dropdown"><a href="#">Государственные и муниципальные услуги</a><i
+                                class="fas fa-chevron-down"></i>
                             <ul class="submenu">
                                 <li class="submenu-item"><a href="<?=PATH?>/gosuslugi/">Новости</a></li>
                                 <li class="submenu-item"><a href="<?=PATH?>/page_394.html">Услуги в электронном виде</a>
@@ -397,7 +414,8 @@
                                 <li class="submenu-item"><a href="<?=PATH?>/page_194.html">Отчеты</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="#">Муниципальный контроль</a>
+                        <li class="menu-item dropdown"><a href="#">Муниципальный контроль</a><i
+                                class="fas fa-chevron-down"></i>
                             <ul class="submenu">
                                 <li class="submenu-item"><a href="<?=PATH?>/page_371.html">Муниципальный контроль</a>
                                 </li>
@@ -408,7 +426,7 @@
                         <li class="menu-item">
                             <a href="<?=PATH?>/page_562.html">Внутренний муниципальный финансовый контроль</a>
                         </li>
-                        <li class="menu-item"><a href="#">Общество</a>
+                        <li class="menu-item dropdown"><a href="#">Общество</a><i class="fas fa-chevron-down"></i>
                             <ul class="submenu">
                                 <li class="submenu-item"><a href="<?=PATH?>/smi/">СМИ</a></li>
                                 <li class="submenu-item"><a href="<?=PATH?>/page_556.html">Общественные организации</a>
@@ -420,13 +438,13 @@
                         <li class="menu-item">
                             <a href="<?=PATH?>/page_372.html">Аккредитация СМИ</a>
                         </li>
-                        <li class="menu-item"><a href="#">Недвижимость</a>
+                        <li class="menu-item dropdown"><a href="#">Недвижимость</a><i class="fas fa-chevron-down"></i>
                             <ul class="submenu">
                                 <li class="submenu-item"><a href="<?=PATH?>/rosreestr/">Росреестр</a></li>
                                 <li class="submenu-item"><a href="<?=PATH?>/kadastr/">Кадастровая палата</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="#">Безопасность</a>
+                        <li class="menu-item dropdown"><a href="#">Безопасность</a><i class="fas fa-chevron-down"></i>
                             <ul class="submenu">
                                 <li class="submenu-item"><a href="<?=PATH?>/page_255.html">Защита населения</a></li>
                                 <li class="submenu-item"><a href="<?=PATH?>/page_517.html">Службы РСЧС</a></li>
@@ -442,7 +460,8 @@
                             <a href="<?=PATH?>/tik/">Территориальная избирательная комиссия</a>
                         </li>
 
-                        <li class="menu-item"><a href="#">Обращения граждан</a>
+                        <li class="menu-item dropdown"><a href="#">Обращения граждан</a><i
+                                class="fas fa-chevron-down"></i>
                             <ul class="submenu">
                                 <li class="submenu-item"><a href="<?=PATH?>/priem/">Вопрос-ответ</a></li>
                                 <li class="submenu-item"><a href="<?=PATH?>/priemadd/">Написать обращение</a></li>
@@ -489,7 +508,8 @@
                     <div class="single__content-article-date">18.08.2021</div>
                     <div class="single__content-article-text">
                         <p>
-                            25 июня в городском Доме культуры состоялось торжественное вручение аттестатов выпускникам МБОУ "Лицей № 17".
+                            25 июня в городском Доме культуры состоялось торжественное вручение аттестатов выпускникам
+                            МБОУ "Лицей № 17".
                         </p>
                         <p>
                             Фото: Владимир Бекк
