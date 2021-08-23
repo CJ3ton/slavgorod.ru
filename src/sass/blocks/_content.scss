@@ -19,6 +19,7 @@
 
             &-item {
                 margin-top: 15px;
+                padding-bottom: 10px;
 
                 &-date {
                     font-size: 16px;
@@ -102,5 +103,69 @@
     &__slider {
         width: 100%;
         box-shadow: 0px 0px 7px #333;
+    }
+}
+
+.nav__page {
+    padding: 4px 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+
+    &-num {
+        border: 1px solid $main-color;
+        font-size: 18px;
+        font-weight: bold;
+        min-width: 25px;
+        height: 25px;
+        box-sizing: border-box;
+        margin: 0 2px;
+        padding: 1px 3px 0 3px;
+        color: $main-color;
+        text-decoration: none;
+        &:hover {
+            color: $sec-color;
+        }
+
+        &-first,
+        &-last,
+        &-prev,
+        &-next {
+            border: 1px solid $main-color;
+            font-size: 20px;
+            height: 25px;
+            width: 25px;
+            margin: 0 2px;
+            text-decoration: none;
+        }
+        &-first,
+        &-last,
+        &-prev,
+        &-next,
+        &-current {
+            color: $main-color;
+        }
+        &-first:hover,
+        &-last:hover,
+        &-prev:hover,
+        &-next:hover {
+            color: $sec-color;
+        }
+    }
+
+    &-current {
+        background: $main-color none repeat scroll 0 0;
+        color: white;
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        min-width: 25px;
+        height: 25px;
+        line-height: 25px;
+        box-sizing: border-box;
+        margin: 0 2px;
+        padding: 0 3px;
     }
 }
