@@ -16,7 +16,7 @@ $(document).ready(function () {
         responsive: [{
             breakpoint: 768,
             settings: {
-                dots: true,
+                dots: false,
                 arrows: false
             }
         }]
@@ -73,6 +73,7 @@ function initMenu() {
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('hamburger_active');
     menu.classList.toggle('open');
+    overlay.classList.toggle('active');
 });
 
 expand.addEventListener('click', () => {
@@ -83,7 +84,7 @@ expand.addEventListener('click', () => {
 menuItem.forEach(item => {
     item.addEventListener('click', () => {
         menu.classList.remove('open');
-    })
+    });
 });
 
 $(window).scroll(function () {
@@ -92,7 +93,7 @@ $(window).scroll(function () {
     } else {
         $('.pageup').fadeOut();
     }
-})
+});
 
 $('.pageup').click(function () {
     var _href = $(this).attr("href");
