@@ -1,0 +1,21 @@
+.tooltip {
+    &::after {
+        background: #fff;
+        border-radius: 8px 8px 8px 0px;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+        color: $main-color;
+        content: attr(data-tooltip); /* Главная часть кода, определяющая содержимое всплывающей подсказки */
+        margin-top: -24px;
+        opacity: 0; /* Наш элемент прозрачен... */
+        padding: 3px 7px;
+        position: absolute;
+        visibility: hidden; /* ...и скрыт. */
+        z-index: 100;        
+        transition: all 0.4s ease-in-out; /* Добавить плавности по вкусу */
+    }
+    &:hover::after {
+        opacity: 1; /* Показываем его */
+        visibility: visible;
+    }
+}
+		
