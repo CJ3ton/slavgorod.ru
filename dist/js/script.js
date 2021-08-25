@@ -61,7 +61,7 @@ $(document).ready(function () {
 
 function initMenu() {
     $('.submenu').hide();
-    $('.dropdown a').click(
+    $('.dropdown>a').click(
         function (evt) {
             evt.preventDefault();
             $(this).next().next().slideToggle('normal');
