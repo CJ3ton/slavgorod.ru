@@ -208,6 +208,10 @@
         max-width: 540px;
     }
 
+    .mistakes {
+        display: none;
+    }
+
     .header {
         &__bottom {
             flex-direction: column;
@@ -222,7 +226,6 @@
             &-expand {
                 display: block;
                 font-size: 24px;
-                position: absolute;
                 right: -30px;
                 color: #fff;
                 cursor: pointer;
@@ -265,6 +268,14 @@
         & .container {
             grid-template-columns: 100%;
             row-gap: 15px;
+        }
+
+        &__content {
+            &-article {
+                &-footer {
+                    justify-content: center;
+                }
+            }
         }
 
         &__right {
@@ -362,21 +373,22 @@
 
         &__bottom {
             padding: 10px 15px;
-
-            &-nav {
-                align-self: flex-start;
-            }
         }
     }
 
     .single {
         &__content {
             &-article {
+                &-photo {
+                    width: 100%;
+                    margin: 15px 0;
+                }
                 &-photorep {
                     grid-template-columns: 100%;
                 }
             }
         }
     }
+
 
 }
