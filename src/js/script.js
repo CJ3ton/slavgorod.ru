@@ -27,6 +27,7 @@ $(document).ready(function () {
         speed: 1200,
         autoplay: true,
         arrows: false,
+        swipeToSlide: true,
         slide: '.footer__slider-slide',
         responsive: [{
                 breakpoint: 1024,

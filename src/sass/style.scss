@@ -2,6 +2,8 @@
 
 @import 'base/variables';
 @import 'libs/slick';
+@import 'libs/microtip';
+@import 'libs/bvi';
 @import 'base/mixins';
 
 * {
@@ -46,6 +48,7 @@ h1 {
     font-size: 20px;
     font-weight: 500;
     color: $main-color;
+    padding: 0 10px;
 }
 
 .ya-share2__container_size_m .ya-share2__badge .ya-share2__icon {
@@ -98,5 +101,4 @@ h1 {
 @import 'blocks/footer';
 @import 'blocks/photorep';
 @import 'blocks/hamburger';
-@import 'blocks/tooltip';
 @import 'blocks/media';

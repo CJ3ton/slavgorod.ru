@@ -1,3 +1,12 @@
+@media (hover: none) and (pointer: coarse) {
+    [aria-label][role~="tooltip"]:hover::before,
+    [aria-label][role~="tooltip"]:hover::after,
+    [aria-label][role~="tooltip"]:focus::before,
+    [aria-label][role~="tooltip"]:focus::after {
+        opacity: 0;
+    }
+}
+
 @media (max-width: 1200px) {
     .container {
         max-width: 960px;
@@ -218,6 +227,7 @@
             gap: 14px;
             padding: 10px 32px 15px 32px;
             transition: all .5s;
+            overflow-y: hidden;
 
             &.expanded {
                 height: 94px;
@@ -280,6 +290,7 @@
 
         &__right {
             width: 100%;
+
             &-button {
                 width: 320px;
                 margin: 10px auto;
@@ -293,8 +304,8 @@
 
                 &:hover {
                     box-shadow: 0px 12px 10px -5px #555;
-                    
-        
+
+
                     & a>.single__right-button-text {
                         color: $sec-color;
                     }
@@ -348,6 +359,13 @@
         }
     }
 
+    [aria-label][role~="tooltip"]:hover::before,
+    [aria-label][role~="tooltip"]:hover::after,
+    [aria-label][role~="tooltip"]:focus::before,
+    [aria-label][role~="tooltip"]:focus::after {
+        opacity: 0;
+    }
+
 }
 
 @media (max-width: 576px) {
@@ -383,6 +401,7 @@
                     width: 100%;
                     margin: 15px 0;
                 }
+
                 &-photorep {
                     grid-template-columns: 100%;
                 }
