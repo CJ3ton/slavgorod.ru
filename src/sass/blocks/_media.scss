@@ -1,4 +1,5 @@
 @media (hover: none) and (pointer: coarse) {
+
     [aria-label][role~="tooltip"]:hover::before,
     [aria-label][role~="tooltip"]:hover::after,
     [aria-label][role~="tooltip"]:focus::before,
@@ -409,5 +410,17 @@
         }
     }
 
+
+}
+
+@media (max-width: 480px) {
+    .doc-filter {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 40px);
+        &__text {
+            grid-column: unset;
+        }
+
+    }
 
 }
