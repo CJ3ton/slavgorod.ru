@@ -2,10 +2,8 @@
     &__docsearch {
         &-title {
             position: relative;
-            height: 32px;
             margin: 0 10px;
-            padding: 5px 15px;
-            line-height: 18px;
+            padding: 8px 15px;
             border: 1px solid $main-color;
             font-size: 16px;
             font-weight: 500;
@@ -17,7 +15,7 @@
                 position: absolute;
                 right: 5px;
                 color: $main-color;
-                top: 8px;
+                top: 9px;
             }
 
             & .icon-left {
