@@ -132,6 +132,7 @@ $(function () {
             changeMonth: true,
             changeYear: true,
             showButtonPanel: true,
+            showAnim: 'fold',
             yearSuffix: ''
         };
         $.datepicker.setDefaults($.datepicker.regional.ru);
