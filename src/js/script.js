@@ -3,6 +3,7 @@ const hamburger = document.querySelector('.hamburger'),
     menuItem = document.querySelectorAll('.menu__link'),
     bottom = document.querySelector('.header__bottom'),
     expand = document.querySelector('.header__bottom-expand'),
+    filterReset = document.querySelector('#doc-filter__reset'),
     overlay = document.querySelector('.overlay');
 
 $(document).ready(function () {
@@ -150,3 +151,7 @@ function searchShow () {
 }
 
 searchShow();
+
+filterReset.addEventListener('click', () => {
+    document.location.href = "/docum/";
+});
