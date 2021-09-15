@@ -26,6 +26,14 @@
                 transform: rotate(180deg);
             }
         }
+        &-block {
+            height: 0;
+            overflow: hidden;
+            transition: all, .5s;
+            &.open {
+                height: 190px;
+            }
+        }
 
     }
 }

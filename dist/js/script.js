@@ -3,7 +3,6 @@ const hamburger = document.querySelector('.hamburger'),
     menuItem = document.querySelectorAll('.menu__link'),
     bottom = document.querySelector('.header__bottom'),
     expand = document.querySelector('.header__bottom-expand'),
-    filterReset = document.querySelector('#doc-filter__reset'),
     overlay = document.querySelector('.overlay');
 
 $(document).ready(function () {
@@ -132,8 +131,8 @@ $(function () {
             selectOtherMonths: true,
             changeMonth: true,
             changeYear: true,
-            showButtonPanel: true,
             showAnim: 'fold',
+            showButtonPanel: true,
             yearSuffix: ''
         };
         $.datepicker.setDefaults($.datepicker.regional.ru);
@@ -141,17 +140,18 @@ $(function () {
 });
 
 function searchShow () {
-    $('.main__docsearch-block').hide();
     $('.main__docsearch-title').click(
         function (evt) {
-            $('.main__docsearch-block').slideToggle('normal');
+            $('.main__docsearch-block').toggleClass('open');
             $('.main__docsearch-title').toggleClass('open');
+            if ($('.main__docsearch-title').hasClass("open")) {
+                Cookies.set('search-open', 'open');
+            }
+            else {
+                Cookies.remove('search-open');
+            }
         }
     );
 }
 
 searchShow();
-
-filterReset.addEventListener('click', () => {
-    document.location.href = "/docum/";
-});

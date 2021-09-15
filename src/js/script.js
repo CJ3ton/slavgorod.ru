@@ -3,8 +3,12 @@ const hamburger = document.querySelector('.hamburger'),
     menuItem = document.querySelectorAll('.menu__link'),
     bottom = document.querySelector('.header__bottom'),
     expand = document.querySelector('.header__bottom-expand'),
-    filterReset = document.querySelector('#doc-filter__reset'),
-    overlay = document.querySelector('.overlay');
+    overlay = document.querySelector('.overlay'),
+    searchDate = document.querySelector('#search_data'),
+    searchType = document.querySelector('#search_type'),
+    searchNum = document.querySelector('#search_num'),
+    searchTxt = document.querySelector('#search_txt'),
+    docFilterReset = document.querySelector('#doc-filter__reset');
 
 $(document).ready(function () {
     $('.main__slider').slick({
@@ -58,6 +62,7 @@ $(document).ready(function () {
     });
 
     initMenu();
+    searchShow();
 
 });
 
@@ -87,6 +92,15 @@ menuItem.forEach(item => {
     item.addEventListener('click', () => {
         menu.classList.remove('open');
     });
+});
+
+docFilterReset.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    console.log(searchDate.value);
+    searchDate.value = '';
+    searchNum.value = '';
+    searchType.selectedIndex = 0;
+    searchTxt.value = '';
 });
 
 $(window).scroll(function () {
@@ -132,8 +146,8 @@ $(function () {
             selectOtherMonths: true,
             changeMonth: true,
             changeYear: true,
-            showButtonPanel: true,
             showAnim: 'fold',
+            showButtonPanel: true,
             yearSuffix: ''
         };
         $.datepicker.setDefaults($.datepicker.regional.ru);
@@ -141,17 +155,19 @@ $(function () {
 });
 
 function searchShow () {
-    $('.main__docsearch-block').hide();
     $('.main__docsearch-title').click(
         function (evt) {
-            $('.main__docsearch-block').slideToggle('normal');
+            $('.main__docsearch-block').toggleClass('open');
             $('.main__docsearch-title').toggleClass('open');
+            if ($('.main__docsearch-title').hasClass("open")) {
+                Cookies.set('search-open', 'open');
+            }
+            else {
+                Cookies.remove('search-open');
+            }
         }
     );
-}
+};
 
-searchShow();
 
-filterReset.addEventListener('click', () => {
-    document.location.href = "/docum/";
-});
+
