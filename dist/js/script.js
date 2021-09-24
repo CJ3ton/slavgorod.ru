@@ -3,7 +3,12 @@ const hamburger = document.querySelector('.hamburger'),
     menuItem = document.querySelectorAll('.menu__link'),
     bottom = document.querySelector('.header__bottom'),
     expand = document.querySelector('.header__bottom-expand'),
-    overlay = document.querySelector('.overlay');
+    overlay = document.querySelector('.overlay'),
+    searchDate = document.querySelector('#search_data'),
+    searchType = document.querySelector('#search_type'),
+    searchNum = document.querySelector('#search_num'),
+    searchTxt = document.querySelector('#search_txt'),
+    docFilterReset = document.querySelector('#doc-filter__reset');
 
 $(document).ready(function () {
     $('.main__slider').slick({
@@ -56,56 +61,6 @@ $(document).ready(function () {
         ]
     });
 
-    initMenu();
-
-});
-
-function initMenu() {
-    $('.submenu').hide();
-    $('.dropdown>a').click(
-        function (evt) {
-            evt.preventDefault();
-            $(this).next().next().slideToggle('normal');
-            $(this).parent().toggleClass('open');
-        }
-    );
-}
-
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('hamburger_active');
-    menu.classList.toggle('open');
-    overlay.classList.toggle('active');
-});
-
-expand.addEventListener('click', () => {
-    bottom.classList.toggle('expanded');
-    expand.classList.toggle('open');
-});
-
-menuItem.forEach(item => {
-    item.addEventListener('click', () => {
-        menu.classList.remove('open');
-    });
-});
-
-$(window).scroll(function () {
-    if ($(this).scrollTop() > 1200) {
-        $('.pageup').fadeIn();
-    } else {
-        $('.pageup').fadeOut();
-    }
-});
-
-$('.pageup').click(function () {
-    var _href = $(this).attr("href");
-    $("html, body").animate({
-        scrollTop: $(_href).offset().top + "px"
-    });
-    menu.classList.remove('open');
-    return false;
-});
-
-$(function () {
     $("#search_data").datepicker();
     jQuery(function ($) {
         $.datepicker.regional.ru = {
@@ -137,21 +92,78 @@ $(function () {
         };
         $.datepicker.setDefaults($.datepicker.regional.ru);
     });
+
+    initMenu();
+    searchShow();
+
 });
 
-function searchShow () {
+function initMenu() {
+    $('.submenu').hide();
+    $('.dropdown>a').click(
+        function (evt) {
+            evt.preventDefault();
+            $(this).next().next().slideToggle('normal');
+            $(this).parent().toggleClass('open');
+        }
+    );
+}
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('hamburger_active');
+    menu.classList.toggle('open');
+    overlay.classList.toggle('active');
+});
+
+expand.addEventListener('click', () => {
+    bottom.classList.toggle('expanded');
+    expand.classList.toggle('open');
+});
+
+menuItem.forEach(item => {
+    item.addEventListener('click', () => {
+        menu.classList.remove('open');
+    });
+});
+
+if (docFilterReset) {
+    docFilterReset.addEventListener('click', (evt) => {
+        evt.preventDefault();
+        console.log(searchDate.value);
+        searchDate.value = '';
+        searchNum.value = '';
+        searchType.selectedIndex = 0;
+        searchTxt.value = '';
+    });
+}
+
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 1200) {
+        $('.pageup').fadeIn();
+    } else {
+        $('.pageup').fadeOut();
+    }
+});
+
+$('.pageup').click(function () {
+    var _href = $(this).attr("href");
+    $("html, body").animate({
+        scrollTop: $(_href).offset().top + "px"
+    });
+    menu.classList.remove('open');
+    return false;
+});
+
+function searchShow() {
     $('.main__docsearch-title').click(
         function (evt) {
             $('.main__docsearch-block').toggleClass('open');
             $('.main__docsearch-title').toggleClass('open');
             if ($('.main__docsearch-title').hasClass("open")) {
                 Cookies.set('search-open', 'open');
-            }
-            else {
+            } else {
                 Cookies.remove('search-open');
             }
         }
     );
 }
-
-searchShow();

@@ -61,6 +61,38 @@ $(document).ready(function () {
         ]
     });
 
+    $("#search_data").datepicker();
+    jQuery(function ($) {
+        $.datepicker.regional.ru = {
+            closeText: 'Закрыть',
+            prevText: '<Пред',
+            nextText: 'След>',
+            currentText: 'Сегодня',
+            monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+                'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
+            ],
+            monthNamesShort: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+                'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
+            ],
+            dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
+            dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
+            dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+            weekHeader: 'Нед',
+            dateFormat: 'dd.mm.yy',
+            firstDay: 1,
+            isRTL: false,
+            showMonthAfterYear: false,
+            showOtherMonths: true,
+            selectOtherMonths: true,
+            changeMonth: true,
+            changeYear: true,
+            showAnim: 'fold',
+            showButtonPanel: true,
+            yearSuffix: ''
+        };
+        $.datepicker.setDefaults($.datepicker.regional.ru);
+    });
+
     initMenu();
     searchShow();
 
@@ -94,14 +126,16 @@ menuItem.forEach(item => {
     });
 });
 
-docFilterReset.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    console.log(searchDate.value);
-    searchDate.value = '';
-    searchNum.value = '';
-    searchType.selectedIndex = 0;
-    searchTxt.value = '';
-});
+if (docFilterReset) {
+    docFilterReset.addEventListener('click', (evt) => {
+        evt.preventDefault();
+        console.log(searchDate.value);
+        searchDate.value = '';
+        searchNum.value = '';
+        searchType.selectedIndex = 0;
+        searchTxt.value = '';
+    });
+}
 
 $(window).scroll(function () {
     if ($(this).scrollTop() > 1200) {
@@ -120,54 +154,16 @@ $('.pageup').click(function () {
     return false;
 });
 
-$(function () {
-    $("#search_data").datepicker();
-    jQuery(function ($) {
-        $.datepicker.regional.ru = {
-            closeText: 'Закрыть',
-            prevText: '<Пред',
-            nextText: 'След>',
-            currentText: 'Сегодня',
-            monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
-                'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
-            ],
-            monthNamesShort: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
-                'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
-            ],
-            dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
-            dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
-            dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-            weekHeader: 'Нед',
-            dateFormat: 'dd.mm.yy',
-            firstDay: 1,
-            isRTL: false,
-            showMonthAfterYear: false,
-            showOtherMonths: true,
-            selectOtherMonths: true,
-            changeMonth: true,
-            changeYear: true,
-            showAnim: 'fold',
-            showButtonPanel: true,
-            yearSuffix: ''
-        };
-        $.datepicker.setDefaults($.datepicker.regional.ru);
-    });
-});
-
-function searchShow () {
+function searchShow() {
     $('.main__docsearch-title').click(
         function (evt) {
             $('.main__docsearch-block').toggleClass('open');
             $('.main__docsearch-title').toggleClass('open');
             if ($('.main__docsearch-title').hasClass("open")) {
                 Cookies.set('search-open', 'open');
-            }
-            else {
+            } else {
                 Cookies.remove('search-open');
             }
         }
     );
-};
-
-
-
+}

@@ -92,3 +92,19 @@
         }
     }
 }
+
+.fa.fa-file-pdf-o.fa-lg {
+	margin-left: 10px;
+}
+
+.fa-file-pdf-o::before {
+	content: "\f1c1";
+}
+
+.fa-lg {
+    font-size: 2em;
+}
+
+.fa {
+    font-weight: 500;
+}
