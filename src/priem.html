@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Администрация города Славгорода Алтайского края</title>
     <link rel="stylesheet" href="css/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="css/jquery-ui/jquery-ui.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -114,7 +113,7 @@
             </div>
     </header>
 
-    <section class="main">
+    <section class="single">
         <div class="container">
             <div class="single__left">
                 <nav class="main__menu">
@@ -496,546 +495,605 @@
                 </div>
 
             </div>
-            <div class="main__content ">
-                <!--Main content-->
+            <div class="single__content ">
 
                 <div class="single__content-bs">
-                    <a href="/">Главная</a>
+                    <a href="/">Главная</a> <i class="fas fa-angle-right"></i> <a href="/news/">Новости и события</a>
                 </div>
 
                 <div class="hr"></div>
 
-                <h1 class="single__content-article-title">Нормативно-правовые акты</h1>
+                <div class="single__content-article">
 
-                <div class="main__docsearch">
-                    <div class="main__docsearch-title"><i class="fas fa-search icon-left"></i>Поиск<i class="fas fa-chevron-down icon-right"></i></div>
-                    <div class="main__docsearch-block">
-                        <form class="doc-filter" method="post" action="/docum/">
-                            <div class="doc-filter__input">
-                                <label class="form-label" for="search_data">Дата документа:</label>
-                                <input class="jq" type="text" autocomplete="off" name="date" id="search_data">
-                            </div>
-        
-                            <div class="doc-filter__input">
-                                <label class="form-label" for="search_type">Тип документа:</label>
-                                <select id="search_type" name="type">
-                                    <option value="">Любой</option>
-                                    <option value="6">Постановление</option>
-                                    <option value="5">Решение</option>
-                                    <option value="7">Распоряжение</option>
-                                </select>
-                            </div>
-                            <div class="doc-filter__input">
-                                <label class="form-label" for="search_num">№ документа:</label>
-                                <input type="text" autocomplete="off" name="doc_num" id="search_num">
-                            </div>
-                            <div class="doc-filter__text">
-                                <label class="form-label" for="search_txt">Текст:</label>
-                                <input type="text" name="doc_text" id="search_txt" value="">
-                            </div>
-                            <input class="doc-filter__submit" type="submit" name="view" value="Искать" id="search_submit">
-                            <input class="doc-filter__submit" type="reset" value="Сбросить" id="doc-filter__reset">
-                            <input type="hidden" name="search" value="close">
+                    <p style="text-align:center;"><strong>Перед написанием обращения рекомендуем ознакомиться с порядком
+                            рассмотрения обращений граждан</strong></p>
+                    <div class="spoiler-title">
+                        <p style="text-align: center;"><strong>Порядок рассмотрения обращений граждан</strong></p>
+                    </div>
+                    <div class="spoiler-body">
+                        <p>1. Перед отправкой электронного обращения необходимо корректно заполнить анкету: в
+                            обязательном порядке указать свои фамилию, имя, отчество (последнее - при наличии), почтовый
+                            адрес, адрес электронной почты, если ответ должен быть направлен в форме электронного
+                            документа, изложить суть предложения, заявления, жалобы (статья 7 Федерального Закона от 2
+                            мая 2006 года №59-ФЗ &laquo;О порядке рассмотрения обращений граждан Российской
+                            Федерации&raquo;).</p>
+                        <p>2. Обращение, поступившее в государственный орган, в орган местного самоуправления или
+                            должностному лицу для исполнения по компетенции, рассматривается в течение 30 дней со дня
+                            его регистрации (статья 12 Федерального закона от 2 мая 2006 года <a
+                                href="http://base.garant.ru/12146661/" target="_blank">№59-ФЗ «О порядке рассмотрения
+                                обращений граждан Российской Федерации»</a>, статья 18 Федерального закона от 9 февраля
+                            2009 года <a href="http://base.garant.ru/194874/" target="_blank">№8-ФЗ «Об обеспечении
+                                доступа к информации о деятельности государственных органов и органов местного
+                                самоуправления»</a>). </p>
+                        <p>3. Ответ направляется в форме электронного документа по адресу электронной почты, указанному
+                            в обращении, или в письменной форме по почтовому адресу заявителя. </p>
+                        <p>4. Уведомление автору о ходе рассмотрения его обращения направляется в электронном виде по
+                            адресу электронной почты (e-mail) или в письменной форме по почтовому адресу заявителя. </p>
+                        <p>5. Обращение не принимается к рассмотрению, если: </p>
+                        <ul>
+                            <li>
+                                в обращении не указаны фамилия гражданина, направившего обращение, почтовый или
+                                электронный адрес;
+                            </li>
+                            <li>
+                                в обращении содержится нецензурная лексика, оскорбительные выражения;
+                            </li>
+                            <li>
+                                текст обращения не поддается прочтению;
+                            </li>
+                            <li>
+                                ответ по существу поставленного вопроса не может быть дан без разглашения сведений,
+                                составляющих государственную или иную охраняемую федеральным законом тайну;
+                            </li>
+                            <li>
+                                в обращении обжалуется судебное решение, при этом обращение возвращается гражданину,
+                                направившему обращение, с разъяснением порядка обжалования данного судебного решения
+                                (статья 11 Федерального Закона от 2 мая 2006 года № 59-ФЗ &quot;О порядке рассмотрения
+                                обращений граждан Российской Федерации»).
+                            </li>
+                        </ul>
+                        <p>6. Ответы по общественно значимым проблемам публикуются в разделе <a
+                                href="http://slavgorod.ru/priem/">«Вопрос-ответ»</a>. </p>
+                        <p>Обращаем ваше внимание на то, что в государственные органы от граждан стали поступать
+                            обращения, в том числе в форме электронного документа, с использованием сайтов, электронных
+                            почтовых адресов, принадлежащих другим лицам &ndash; через опосредованных лиц, что влечет
+                            нарушение гарантий на защиту персональных данных гражданина и неразглашение сведений,
+                            содержащихся в обращении и касающихся его частной жизни. </p>
+                    </div>
+                    <p><a href="http://slavgorod.ru/docum/docum_1278.html">Постановление №600 от 26.04.2016 г. Об
+                            утверждении Порядка ведения делопроизводства по обращениям граждан, объединений граждан, в
+                            том числе юридических лиц, организации их рассмотрения в администрации города, органах
+                            администрации города, муниципальных учреждениях, предприятиях</a></p>
+                    <p><a href="http://slavgorod.ru/grafikipriema/">График приёма граждан руководителями администрации
+                            г. Славгорода</a></p>
+                    <p>Ответственный: Начальник управления делами администрации города Славгорода <a
+                            href="http://slavgorod.ru/upr-del/">Мариненко Алексей Александрович</a> (Телефон: 5-17-74)
+                    </p>
+                    <hr>
+                    <div id="form_div">
+                        <form method="post" action="https://slavgorod.ru/priemadd/" enctype="multipart/form-data">
+                            <label for="select_whom">Кому адресовано обращение: *</label>
+                            <select id="select_whom" name="whom_id" class="select__item" style="width:270px;">
+                                <option value="1" selected>Л.В. Подгора - Глава города</option>
+                                <option value="2">Е.В. Нестеренко - Заместитель главы администрации</option>
+                                <option value="3">Е.Э. Радионова - Заместитель главы администрации</option>
+                                <option value="4">Е.П. Князева - Заместитель главы администрации</option>
+                            </select>
+                            <label for="nik">Фамилия, имя, отчество:*</label>
+                            <input type="text" id="nik" name="nik" maxlength="50" value="">
+                            <label for="adr_index">Почтовый индекс: *</label>
+                            <input type="text" id="adr_index" name="adr_index" maxlength="6" value="">
+                            <label for="select_region">Регион: *</label>
+                            <select id="select_region" name="adr_region" class="select__item">
+                                <option value="Алтайский край" selected>Алтайский край</option>
+                                <option value="Москва">Москва</option>
+                                <option value="Санкт-Петербург">Санкт-Петербург</option>
+                                <option value="Агинский Бурятский автономный округ">Агинский Бурятский автономный округ
+                                </option>
+                                <option value="Амурская область">Амурская область</option>
+                                <option value="Архангельская область">Архангельская область</option>
+                                <option value="Астраханская область">Астраханская область</option>
+                                <option value="Белгородская область">Белгородская область</option>
+                                <option value="Брянская область">Брянская область</option>
+                                <option value="Владимирская область">Владимирская область</option>
+                                <option value="Волгоградская область">Волгоградская область</option>
+                                <option value="Воронежская область">Воронежская область</option>
+                                <option value="Еврейская автономная область">Еврейская автономная область</option>
+                                <option value="Ивановская область">Ивановская область</option>
+                                <option value="Иркутская область">Иркутская область</option>
+                                <option value="Кабардино-Балкарская Республика">Кабардино-Балкарская Республика</option>
+                                <option value="Калининградская область">Калининградская область</option>
+                                <option value="Калужская область">Калужская область</option>
+                                <option value="Камчатская область">Камчатская область</option>
+                                <option value="Карачаево-Черкесская Республика">Карачаево-Черкесская Республика</option>
+                                <option value="Кемеровская область">Кемеровская область</option>
+                                <option value="Кировская область">Кировская область</option>
+                                <option value="Коми-Пермяцкий автономный округ">Коми-Пермяцкий автономный округ</option>
+                                <option value="Корякский автономный округ">Корякский автономный округ</option>
+                                <option value="Костромская область">Костромская область</option>
+                                <option value="Краснодарский край">Краснодарский край</option>
+                                <option value="Красноярский край">Красноярский край</option>
+                                <option value="Курганская область">Курганская область</option>
+                                <option value="Курская область">Курская область</option>
+                                <option value="Ленинградская область">Ленинградская область</option>
+                                <option value="Липецкая область">Липецкая область</option>
+                                <option value="Магаданская область">Магаданская область</option>
+                                <option value="Московская область">Московская область</option>
+                                <option value="Мурманская область">Мурманская область</option>
+                                <option value="Ненецкий автономный округ">Ненецкий автономный округ</option>
+                                <option value="Нижегородская область">Нижегородская область</option>
+                                <option value="Новгородская область">Новгородская область</option>
+                                <option value="Новосибирская область">Новосибирская область</option>
+                                <option value="Омская область">Омская область</option>
+                                <option value="Оренбургская область">Оренбургская область</option>
+                                <option value="Орловская область">Орловская область</option>
+                                <option value="Пензенская область">Пензенская область</option>
+                                <option value="Пермская область">Пермская область</option>
+                                <option value="Приморский край">Приморский край</option>
+                                <option value="Псковская область">Псковская область</option>
+                                <option value="Республика Адыгея (Адыгея)">Республика Адыгея (Адыгея)</option>
+                                <option value="Республика Алтай">Республика Алтай</option>
+                                <option value="Республика Башкортостан">Республика Башкортостан</option>
+                                <option value="Республика Бурятия">Республика Бурятия</option>
+                                <option value="Республика Дагестан">Республика Дагестан</option>
+                                <option value="Республика Ингушетия">Республика Ингушетия</option>
+                                <option value="Республика Калмыкия">Республика Калмыкия</option>
+                                <option value="Республика Карелия">Республика Карелия</option>
+                                <option value="Республика Коми">Республика Коми</option>
+                                <option value="Республика Марий Эл">Республика Марий Эл</option>
+                                <option value="Республика Мордовия">Республика Мордовия</option>
+                                <option value="Республика Саха (Якутия)">Республика Саха (Якутия)</option>
+                                <option value="Республика Северная Осетия - Алания">Республика Северная Осетия - Алания
+                                </option>
+                                <option value="Республика Татарстан (Татарстан)">Республика Татарстан (Татарстан)
+                                </option>
+                                <option value="Республика Тыва">Республика Тыва</option>
+                                <option value="Республика Хакасия">Республика Хакасия</option>
+                                <option value="Ростовская область">Ростовская область</option>
+                                <option value="Рязанская область">Рязанская область</option>
+                                <option value="Самарская область">Самарская область</option>
+                                <option value="Саратовская область">Саратовская область</option>
+                                <option value="Сахалинская область">Сахалинская область</option>
+                                <option value="Свердловская область">Свердловская область</option>
+                                <option value="Смоленская область">Смоленская область</option>
+                                <option value="Ставропольский край">Ставропольский край</option>
+                                <option value="Таймырский (Долгано-Ненецкий) автономный округ">Таймырский
+                                    (Долгано-Ненецкий) автономный округ</option>
+                                <option value="Тамбовская область">Тамбовская область</option>
+                                <option value="Тверская область">Тверская область</option>
+                                <option value="Томская область">Томская область</option>
+                                <option value="Тульская область">Тульская область</option>
+                                <option value="Тюменская область">Тюменская область</option>
+                                <option value="Удмуртская Республика">Удмуртская Республика</option>
+                                <option value="Ульяновская область">Ульяновская область</option>
+                                <option value="Усть-Ордынский Бурятский автономный округ">Усть-Ордынский Бурятский
+                                    автономный округ</option>
+                                <option value="Хабаровский край">Хабаровский край</option>
+                                <option value="Ханты-Мансийский автономный округ">Ханты-Мансийский автономный округ
+                                </option>
+                                <option value="Челябинская область">Челябинская область</option>
+                                <option value="Чеченская Республика">Чеченская Республика</option>
+                                <option value="Читинская область">Читинская область</option>
+                                <option value="Чувашская Республика - Чувашия">Чувашская Республика - Чувашия</option>
+                                <option value="Чукотский автономный округ">Чукотский автономный округ</option>
+                                <option value="Эвенкийский автономный округ">Эвенкийский автономный округ</option>
+                                <option value="Ямало-Ненецкий автономный округ">Ямало-Ненецкий автономный округ</option>
+                                <option value="Ярославская область">Ярославская область</option>
+                                <option value="Казахстан">Казахстан</option>
+                                <option value="Кыргызстан">Кыргызстан</option>
+                                <option value="Украина">Украина</option>
+                                <option value="Эстония">Эстония</option>
+                                <option value="Прочие регионы">Прочие регионы</option>
+                            </select>
+
+                            <label for="adr_punkt">Населенный пункт: *</label>
+                            <input type="text" id="adr_punkt" name="adr_punkt" maxlength="50" value="">
+
+                            <label for="adr_dom">Улица, номер дома, квартиры: *</label>
+                            <input type="text" id="adr_dom" name="adr_dom" maxlength="50" value="">
+
+                            <label for="email">Ваш e-mail:</label>
+                            <input id="email" type="text" name="email" maxlength="200" value=""><span id="valid"></span>
+
+                            <label for="tel">Телефон (только цифры):</label>
+                            <input id="tel" type="text" name="tel" maxlength="15" value=""><span id="valid_tel"></span>
+
+                            <label for="status">Статус заявителя:</label>
+                            <select id="status" name="status" class="select__item">
+                                <option value=""></option>
+                                <option value="Инвалид">Инвалид</option>
+                                <option value="Пенсионер">Пенсионер</option>
+                                <option value="Рабочий">Рабочий</option>
+                                <option value="Безработный">Безработный</option>
+                                <option value="Предприниматель">Предприниматель</option>
+                                <option value="Бюджетник">Бюджетник</option>
+                                <option value="Студент, учащийся">Студент, учащийся</option>
+                                <option value="Военнослужащий или член его семьи">Военнослужащий или член его семьи
+                                </option>
+                                <option value="Без определенного места жительства">Без определенного места жительства
+                                </option>
+                                <option value="Осужденный">Осужденный</option>
+                                <option value="Другой">Другой</option>
+                            </select>
+
+                            <label for="attachment">Загрузить файл: </label>
+                            <input type="file" id="attachment" size="40"
+                                accept="image/*,video/*,audio/*,text/plain,application/pdf,application/msword,application/powerpoint,application/rtf,application/excel"
+                                name="uploadfile" value="" class="inputfile" />
+
+                            <p>(Вы можете приложить дополнительные документы или материалы в электронной форме, более
+                                полно раскрывающие суть Вашего обращения. Размер файла вложения не может превышать 5 Мб.
+                                Для вложений допустимы следующие форматы файлов: gif, jpg, png, jpeg, pdf, doc, tiff,
+                                docx, txt, rtf, xls, xlsx, bmp, ppt, mp3, mp4, avi, 3gp, wma)</p>
+
+                            <label for="vopros">Текст Вашего Обращения: *</label>
+                            <textarea id="vopros" name="vopros" rows="6"></textarea>
+
+                            <p>Защита от спама.</p>
+
+                            <div class="g-recaptcha" data-sitekey="6LcPNewSAAAAAI5LiQH_Zyx3qSAi-g4I8hQEoHrp"></div>
+
+                            <p>Информация о персональных данных авторов обращений, направленных в электронном виде,
+                                хранится и обрабатывается с соблюдением <a target="_blank"
+                                    href="http://ivo.garant.ru/#/document/12148567:0">требований российского
+                                    законодательства о персональных данных.</a></p>
+
+                            <input class="button__submit" id="send" type="submit" name="submit" value="Отправить">
                         </form>
                     </div>
+
+                    <script type="text/javascript">
+                        $(document).ready(function () {
+                            $('#email').blur(function () {
+                                if ($(this).val() != '') {
+                                    var pattern =
+                                        /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+                                    if (pattern.test($(this).val())) {
+                                        $(this).css({
+                                            'border': '1px solid #569b44'
+                                        });
+                                        $('#valid').text('  Корректный адрес');
+                                        //$("#send").removeAttr("disabled");
+                                    } else {
+                                        $(this).css({
+                                            'border': '1px solid #ff0000'
+                                        });
+                                        $('#valid').text('  Некорректный адрес!');
+                                        //	$("#send").attr("disabled", "disabled")
+                                    }
+                                } else {
+                                    // $("#send").removeAttr("disabled");
+                                    $('#valid').text('');
+                                    $(this).css({
+                                        'border': ''
+                                    });
+                                }
+                            });
+                            $('#tel').blur(function () {
+                                if ($(this).val() != '') {
+                                    var pattern =
+                                    /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/i;
+                                    if (pattern.test($(this).val())) {
+                                        $(this).css({
+                                            'border': '1px solid #569b44'
+                                        });
+                                        $('#valid_tel').text('  Корректный номер');
+                                        //$("#send").removeAttr("disabled");
+                                    } else {
+                                        $(this).css({
+                                            'border': '1px solid #ff0000'
+                                        });
+                                        $('#valid_tel').text('  Некорректный номер!');
+                                        //$("#send").attr("disabled", "disabled")
+                                    }
+                                } else {
+                                    //$("#send").removeAttr("disabled");
+                                    $('#valid_tel').text('');
+                                    $(this).css({
+                                        'border': ''
+                                    });
+                                }
+                            });
+                            $('#adr_index').bind("change keyup input click", function () {
+                                if (this.value.match(/[^0-9]/g)) {
+                                    this.value = this.value.replace(/[^0-9]/g, '');
+                                }
+                            });
+                        });
+                    </script>
+
                 </div>
 
-                <!-- <div class="hr"></div> -->
-
-                <div class="main__content-news-item">
-                    <div class="main__content-news-item-title">
-                        <a href="#">
-                            Постановление № 811 от 02.09.2021
-                        </a>
-                    </div>
-                    <div class="main__content-news-item-text">
-                        О внесении изменений в постановление администрации города
-                        Славгорода Алтайского края от 05.03.2020 № 167 «О передаче на содержание и обслуживание
-                        бесхозяйных тепловых сетей»...
-                    </div>
-                </div>
-                <div class="main__content-news-item">
-                    <div class="main__content-news-item-title">
-                        <a href="#">
-                            Постановление № 812 от 02.09.2021
-                        </a>
-                    </div>
-                    <div class="main__content-news-item-text">
-                        О внесении изменений в постановление администрации города
-                        Славгорода Алтайского края от 05.03.2020 № 167 «О передаче на содержание и обслуживание
-                        бесхозяйных тепловых сетей»...
-                    </div>
-                </div>
-                <div class="main__content-news-item">
-                    <div class="main__content-news-item-title">
-                        <a href="#">
-                            Постановление № 811 от 02.09.2021
-                        </a>
-                    </div>
-                    <div class="main__content-news-item-text">
-                        О внесении изменений в постановление администрации города
-                        Славгорода Алтайского края от 05.03.2020 № 167 «О передаче на содержание и обслуживание
-                        бесхозяйных тепловых сетей»...
-                    </div>
-                </div>
-                <div class="main__content-news-item">
-                    <div class="main__content-news-item-title">
-                        <a href="#">
-                            Постановление № 811 от 02.09.2021
-                        </a>
-                    </div>
-                    <div class="main__content-news-item-text">
-                        О внесении изменений в постановление администрации города
-                        Славгорода Алтайского края от 05.03.2020 № 167 «О передаче на содержание и обслуживание
-                        бесхозяйных тепловых сетей»...
-                    </div>
-                </div>
-                <div class="main__content-news-item">
-                    <div class="main__content-news-item-title">
-                        <a href="#">
-                            Постановление № 811 от 02.09.2021
-                        </a>
-                    </div>
-                    <div class="main__content-news-item-text">
-                        О внесении изменений в постановление администрации города
-                        Славгорода Алтайского края от 05.03.2020 № 167 «О передаче на содержание и обслуживание
-                        бесхозяйных тепловых сетей»...
-                    </div>
-                </div>
-                <div class="main__content-news-item">
-                    <div class="main__content-news-item-title">
-                        <a href="#">
-                            Постановление № 811 от 02.09.2021
-                        </a>
-                    </div>
-                    <div class="main__content-news-item-text">
-                        О внесении изменений в постановление администрации города
-                        Славгорода Алтайского края от 05.03.2020 № 167 «О передаче на содержание и обслуживание
-                        бесхозяйных тепловых сетей»...
-                    </div>
-                </div>
-                <div class="main__content-news-item">
-                    <div class="main__content-news-item-title">
-                        <a href="#">
-                            Постановление № 811 от 02.09.2021
-                        </a>
-                    </div>
-                    <div class="main__content-news-item-text">
-                        О внесении изменений в постановление администрации города
-                        Славгорода Алтайского края от 05.03.2020 № 167 «О передаче на содержание и обслуживание
-                        бесхозяйных тепловых сетей»...
-                    </div>
-                </div>
-                <div class="main__content-news-item">
-                    <div class="main__content-news-item-title">
-                        <a href="#">
-                            Постановление № 811 от 02.09.2021
-                        </a>
-                    </div>
-                    <div class="main__content-news-item-text">
-                        О внесении изменений в постановление администрации города
-                        Славгорода Алтайского края от 05.03.2020 № 167 «О передаче на содержание и обслуживание
-                        бесхозяйных тепловых сетей»...
-                    </div>
-                </div>
-                <div class="main__content-news-item">
-                    <div class="main__content-news-item-title">
-                        <a href="#">
-                            Постановление № 811 от 02.09.2021
-                        </a>
-                    </div>
-                    <div class="main__content-news-item-text">
-                        О внесении изменений в постановление администрации города
-                        Славгорода Алтайского края от 05.03.2020 № 167 «О передаче на содержание и обслуживание
-                        бесхозяйных тепловых сетей»...
-                    </div>
-                </div>
-                <div class="main__content-news-item">
-                    <div class="main__content-news-item-title">
-                        <a href="#">
-                            Постановление № 811 от 02.09.2021
-                        </a>
-                    </div>
-                    <div class="main__content-news-item-text">
-                        О внесении изменений в постановление администрации города
-                        Славгорода Алтайского края от 05.03.2020 № 167 «О передаче на содержание и обслуживание
-                        бесхозяйных тепловых сетей»...
-                    </div>
-                </div>
-                <div class="main__content-news-item">
-                    <div class="main__content-news-item-title">
-                        <a href="#">
-                            Постановление № 811 от 02.09.2021
-                        </a>
-                    </div>
-                    <div class="main__content-news-item-text">
-                        О внесении изменений в постановление администрации города
-                        Славгорода Алтайского края от 05.03.2020 № 167 «О передаче на содержание и обслуживание
-                        бесхозяйных тепловых сетей»...
-                    </div>
-                </div>
-                <div class="main__content-news-item">
-                    <div class="main__content-news-item-title">
-                        <a href="#">
-                            Постановление № 811 от 02.09.2021
-                        </a>
-                    </div>
-                    <div class="main__content-news-item-text">
-                        О внесении изменений в постановление администрации города
-                        Славгорода Алтайского края от 05.03.2020 № 167 «О передаче на содержание и обслуживание
-                        бесхозяйных тепловых сетей»...
-                    </div>
-                </div>
-                <div class="main__content-news-item">
-                    <div class="main__content-news-item-title">
-                        <a href="#">
-                            Постановление № 811 от 02.09.2021
-                        </a>
-                    </div>
-                    <div class="main__content-news-item-text">
-                        О внесении изменений в постановление администрации города
-                        Славгорода Алтайского края от 05.03.2020 № 167 «О передаче на содержание и обслуживание
-                        бесхозяйных тепловых сетей»...
-                    </div>
-                </div>
-                <div class="main__content-news-item">
-                    <div class="main__content-news-item-title">
-                        <a href="#">
-                            Постановление № 811 от 02.09.2021
-                        </a>
-                    </div>
-                    <div class="main__content-news-item-text">
-                        О внесении изменений в постановление администрации города
-                        Славгорода Алтайского края от 05.03.2020 № 167 «О передаче на содержание и обслуживание
-                        бесхозяйных тепловых сетей»...
-                    </div>
-                </div>
-                <div class="main__content-news-item">
-                    <div class="main__content-news-item-title">
-                        <a href="#">
-                            Постановление № 811 от 02.09.2021
-                        </a>
-                    </div>
-                    <div class="main__content-news-item-text">
-                        О внесении изменений в постановление администрации города
-                        Славгорода Алтайского края от 05.03.2020 № 167 «О передаче на содержание и обслуживание
-                        бесхозяйных тепловых сетей»...
-                    </div>
-                </div>
-                <div class="main__content-news-item">
-                    <div class="main__content-news-item-title">
-                        <a href="#">
-                            Постановление № 811 от 02.09.2021
-                        </a>
-                    </div>
-                    <div class="main__content-news-item-text">
-                        О внесении изменений в постановление администрации города
-                        Славгорода Алтайского края от 05.03.2020 № 167 «О передаче на содержание и обслуживание
-                        бесхозяйных тепловых сетей»...
-                    </div>
-                </div>
-                <div class="main__content-news-item">
-                    <div class="main__content-news-item-title">
-                        <a href="#">
-                            Постановление № 811 от 02.09.2021
-                        </a>
-                    </div>
-                    <div class="main__content-news-item-text">
-                        О внесении изменений в постановление администрации города
-                        Славгорода Алтайского края от 05.03.2020 № 167 «О передаче на содержание и обслуживание
-                        бесхозяйных тепловых сетей»...
-                    </div>
-                </div>
-                
-                <div class="hr"></div>
-
-                <div class="main__content-news-pages">
-                    <div class="nav__page">
-                        <a class="nav__page-num-first" title="Первая" href="#">
-                            <i class="fas fa-angle-left" aria-hidden="true"></i>
-                        </a>
-                        <a class="nav__page-num-prev" title="Предыдущая" href="#">
-                            <i class="fas fa-angle-double-left" aria-hidden="true"></i>
-                        </a>
-                        <a class="nav__page-num" href="#">
-                            1
-                        </a>
-                        <div class="nav__page-current">2</div>
-                        <a class="nav__page-num" href="#">
-                            3
-                        </a>
-                        <a class="nav__page-num" href="#">4</a>
-                        <a class="nav__page-num" href="#">
-                            5
-                        </a>
-                        <a class="nav__page-num-next" title="Следующая" href="#">
-                            <i class="fas fa-angle-right" aria-hidden="true"></i>
-                        </a>
-                        <a class="nav__page-num-last" title="Последняя" href="#">
-                            <i class="fas fa-angle-double-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-
-            </div> <!-- End of main content-->
-            <div class="main__right">
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+            </div>
+            <div class="single__right">
+                <div class="single__right-button" role="tooltip" aria-label="Всероссийская перепись населения"
+                    data-microtip-position="left" data-microtip-size="medium">
+                    <a href="https://slavgorod.ru/strana2020/">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/1.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             Всероссийская перепись населения
                         </div>
                     </a>
                 </div>
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+                <div class="single__right-button" role="tooltip" aria-label="Формирование комфортной городской среды"
+                    data-microtip-position="left" data-microtip-size="medium">
+                    <a href="https://slavgorod.ru/kgs/">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/2.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             Формирование комфортной городской среды
                         </div>
                     </a>
                 </div>
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+                <div class="single__right-button" role="tooltip" aria-label="Алтайэнергосбыт"
+                    data-microtip-position="left" data-microtip-size="medium">
+                    <a href="https://altaiensb.com/">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/3.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             Алтайэнергосбыт
                         </div>
                     </a>
                 </div>
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+                <div class="single__right-button" role="tooltip" aria-label="МУП “Коммунальщик”"
+                    data-microtip-position="left" data-microtip-size="medium">
+                    <a href="https://kom22.ru/">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/4.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             МУП “Коммунальщик”
                         </div>
                     </a>
                 </div>
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+                <div class="single__right-button" role="tooltip" aria-label="Туризм в Славгороде"
+                    data-microtip-position="left" data-microtip-size="medium">
+                    <a href="http://turizm.slavgorod.ru/">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/5.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             Туризм в Славгороде
                         </div>
                     </a>
                 </div>
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+                <div class="single__right-button" role="tooltip"
+                    aria-label="Славгородский городской краеведческий музей" data-microtip-position="left"
+                    data-microtip-size="medium">
+                    <a href="http://museum.slavgorod.ru/">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/6.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             Славгородский городской краеведческий музей
                         </div>
                     </a>
                 </div>
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+                <div class="single__right-button" role="tooltip" aria-label="Награды города Славгорода"
+                    data-microtip-position="left" data-microtip-size="medium">
+                    <a href="https://slavgorod.ru/awards/">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/7.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             Награды города Славгорода
                         </div>
                     </a>
                 </div>
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+                <div class="single__right-button" role="tooltip" aria-label="Награды Алтайского края"
+                    data-microtip-position="left" data-microtip-size="medium">
+                    <a href="https://www.altairegion22.ru/gov/administration/isp/uprgosslu/nagrady/">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/8.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             Награды Алтайского края
                         </div>
                     </a>
                 </div>
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+                <div class="single__right-button" role="tooltip"
+                    aria-label="Календарный план основных городских мероприятий" data-microtip-position="left"
+                    data-microtip-size="medium">
+                    <a href="https://slavgorod.ru/page_414.html">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/9.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             Календарный план основных городских мероприятий
                         </div>
                     </a>
                 </div>
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+                <div class="single__right-button" role="tooltip" aria-label="Фотоальбом 100 лет Славгороду"
+                    data-microtip-position="left" data-microtip-size="medium">
+                    <a href="https://slavgorod.ru/files/kult/slavgorod100.pdf">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/10.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             Фотоальбом 100 лет Славгороду
                         </div>
                     </a>
                 </div>
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+                <div class="single__right-button" role="tooltip" aria-label="РАНХиГС" data-microtip-position="left"
+                    data-microtip-size="medium">
+                    <a href="https://slavgorod.ru/ranepa/">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/11.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             РАНХиГС
                         </div>
                     </a>
                 </div>
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+                <div class="single__right-button" role="tooltip" aria-label="МЧС России" data-microtip-position="left"
+                    data-microtip-size="medium">
+                    <a href="https://slavgorod.ru/mchs/">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/12.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             МЧС России
                         </div>
                     </a>
                 </div>
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+                <div class="single__right-button" role="tooltip" aria-label="Прокуратура информирует"
+                    data-microtip-position="left" data-microtip-size="medium">
+                    <a href="https://slavgorod.ru/prokuratura/">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/13.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             Прокуратура информирует
                         </div>
                     </a>
                 </div>
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+                <div class="single__right-button" role="tooltip" aria-label="Славгородский МО МВД"
+                    data-microtip-position="left" data-microtip-size="medium">
+                    <a href="https://slavgorod.ru/police/">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/14.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             Славгородский МО<br>МВД
                         </div>
                     </a>
                 </div>
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+                <div class="single__right-button" role="tooltip"
+                    aria-label="Пограничное управление ФСБ России по Алтайскому краю" data-microtip-position="left"
+                    data-microtip-size="medium">
+                    <a href="https://slavgorod.ru/fsb/">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/15.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             Пограничное управ-
                             ление ФСБ России по Алтайскому краю
                         </div>
                     </a>
                 </div>
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+                <div class="single__right-button" role="tooltip" aria-label="Пенсионный фонд"
+                    data-microtip-position="left" data-microtip-size="medium">
+                    <a href="https://slavgorod.ru/pfrf/">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/16.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             Пенсионный фонд
                         </div>
                     </a>
                 </div>
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+                <div class="single__right-button" role="tooltip" aria-label="Налоговая служба"
+                    data-microtip-position="left" data-microtip-size="medium">
+                    <a href="https://slavgorod.ru/fns/">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/17.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             Налоговая служба
                         </div>
                     </a>
                 </div>
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+                <div class="single__right-button" role="tooltip" aria-label="Гостехнадзор информирует"
+                    data-microtip-position="left" data-microtip-size="medium">
+                    <a href="https://slavgorod.ru/gostehnadzor/">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/18.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             Гостехнадзор информирует
                         </div>
                     </a>
                 </div>
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+                <div class="single__right-button" role="tooltip" aria-label="Роспотребнадзор информирует"
+                    data-microtip-position="left" data-microtip-size="medium">
+                    <a href="https://slavgorod.ru/rpn/">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/19.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             Роспотребнадзор информирует
                         </div>
                     </a>
                 </div>
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+                <div class="single__right-button" role="tooltip" aria-label="Телевидение “Степь”"
+                    data-microtip-position="left" data-microtip-size="medium">
+                    <a href="http://tv.slavgorod.ru/">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/20.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             Телевидение “Степь”
                         </div>
                     </a>
                 </div>
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+                <div class="single__right-button" role="tooltip" aria-label="Славгородские вести"
+                    data-microtip-position="left" data-microtip-size="medium">
+                    <a href="http://slavgorodvesti.ru/">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/21.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             Славгородские вести
                         </div>
                     </a>
                 </div>
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+                <div class="single__right-button" role="tooltip"
+                    aria-label="Фонд капитального ремонта МКД Алтайского края" data-microtip-position="left"
+                    data-microtip-size="medium">
+                    <a href="http://fkr22.ru/">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/22.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             Фонд капитального ремонта МКД Алтайского края
                         </div>
                     </a>
                 </div>
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+                <div class="single__right-button" role="tooltip" aria-label="Кадастровая палата"
+                    data-microtip-position="left" data-microtip-size="medium">
+                    <a href="https://slavgorod.ru/kadastr/">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/23.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             Кадастровая палата
                         </div>
                     </a>
                 </div>
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+                <div class="single__right-button" role="tooltip" aria-label="Фонд социального страхования"
+                    data-microtip-position="left" data-microtip-size="medium">
+                    <a href="https://slavgorod.ru/fss/">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/24.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             Фонд социального страхования
                         </div>
                     </a>
                 </div>
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+                <div class="single__right-button" role="tooltip" aria-label="ВПК “Десантник”"
+                    data-microtip-position="left" data-microtip-size="medium">
+                    <a href="http://desantnik-slavgorod.ru/">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/25.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             ВПК “Десантник”
                         </div>
                     </a>
                 </div>
-                <div class="main__right-button">
-                    <a href="#">
-                        <div class="main__right-button-image">
+                <div class="single__right-button" role="tooltip"
+                    aria-label="Комплексный центр социального обслуживания населения" data-microtip-position="left"
+                    data-microtip-size="medium">
+                    <a href="https://slavgorod.ru/cso/">
+                        <div class="single__right-button-image">
                             <img src="/icons/rbutton/26.png" alt="1">
                         </div>
-                        <div class="main__right-button-text">
+                        <div class="single__right-button-text">
                             Комплексный центр социального обслу-
                             живания населения
                         </div>
@@ -1086,7 +1144,6 @@
     </div>
     <div class="overlay"></div>
     <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
     <script src="js/script.js"></script>
