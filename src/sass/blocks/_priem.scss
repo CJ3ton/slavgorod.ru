@@ -1,0 +1,22 @@
+.priem {
+    margin-top: 20px;
+
+    &__title {
+        text-align: center;
+        font-weight: 500;
+    }
+
+    & h2 {
+        font-size: 16px;
+        text-align: center;
+        font-weight: 500;
+        color: $main-color;
+    }
+
+    &__list {
+        margin: 0 25px;
+        & li {
+            margin: 10px 5px;
+        }
+    }
+}

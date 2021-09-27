@@ -167,3 +167,61 @@ function searchShow() {
         }
     );
 }
+
+$(document).ready(function () {
+    $('#email').blur(function () {
+        if ($(this).val() != '') {
+            var pattern =
+                /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+            if (pattern.test($(this).val())) {
+                $(this).css({
+                    'border': '1px solid #569b44'
+                });
+                $('#valid').text('  Корректный адрес');
+                //$("#send").removeAttr("disabled");
+            } else {
+                $(this).css({
+                    'border': '1px solid #ff0000'
+                });
+                $('#valid').text('  Некорректный адрес!');
+                //	$("#send").attr("disabled", "disabled")
+            }
+        } else {
+            // $("#send").removeAttr("disabled");
+            $('#valid').text('');
+            $(this).css({
+                'border': ''
+            });
+        }
+    });
+    $('#tel').blur(function () {
+        if ($(this).val() != '') {
+            var pattern =
+                /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/i;
+            if (pattern.test($(this).val())) {
+                $(this).css({
+                    'border': '1px solid #569b44'
+                });
+                $('#valid_tel').text('  Корректный номер');
+                //$("#send").removeAttr("disabled");
+            } else {
+                $(this).css({
+                    'border': '1px solid #ff0000'
+                });
+                $('#valid_tel').text('  Некорректный номер!');
+                //$("#send").attr("disabled", "disabled")
+            }
+        } else {
+            //$("#send").removeAttr("disabled");
+            $('#valid_tel').text('');
+            $(this).css({
+                'border': ''
+            });
+        }
+    });
+    $('#adr_index').bind("change keyup input click", function () {
+        if (this.value.match(/[^0-9]/g)) {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        }
+    });
+});
