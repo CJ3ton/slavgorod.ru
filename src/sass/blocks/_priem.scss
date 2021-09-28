@@ -1,5 +1,5 @@
 .priem {
-    margin-top: 20px;
+    margin: 20px 10px;
 
     &__title {
         text-align: center;
@@ -18,5 +18,9 @@
         & li {
             margin: 10px 5px;
         }
+    }
+
+    p {
+        margin: 10px 0;
     }
 }

@@ -108,12 +108,12 @@ h1 {
 
 .spoiler {
     &__title {
-        margin: 10px;
+        margin: 10px 10px 0px;
         border: 1px solid #888;
         padding: 8px 15px;
         position: relative;
         cursor: pointer;
-    
+
         &::after {
             content: "\f078";
             font-family: "Font Awesome 5 Free";
@@ -125,9 +125,11 @@ h1 {
             transform: translateY(-50%);
         }
     }
+
     &__body {
         padding: 0 10px;
-        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        margin: 0 10px 20px;
     }
 }
 
