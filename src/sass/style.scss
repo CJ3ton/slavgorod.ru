@@ -123,6 +123,11 @@ h1 {
             right: 15px;
             top: 50%;
             transform: translateY(-50%);
+            transition: all .3s;
+        }
+        &.open::after {
+            transform: translateY(-50%) rotate(180deg);
+            transition: all .3s;
         }
     }
 

@@ -230,7 +230,6 @@ jQuery(document).ready(function ($) {
     $('.spoiler__body').hide();
     $('.spoiler__title').click(function () {
         $(this).next().slideToggle();
-        $(this).find('.toggle').toggleClass('close');
-        $(this).find('.toggle').toggleClass('open');
+        $(this).toggleClass('open');
     });
     });

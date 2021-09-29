@@ -580,21 +580,21 @@
                             href="http://slavgorod.ru/upr-del/">Мариненко Алексей Александрович</a> (Телефон: 5-17-74)
                     </p>
                     <hr>
-                    <div id="form_div">
-                        <form method="post" action="https://slavgorod.ru/priemadd/" enctype="multipart/form-data">
-                            <label for="select_whom">Кому адресовано обращение: *</label>
-                            <select id="select_whom" name="whom_id" class="select__item" style="width:270px;">
+                    <div id="priem__form-wrap">
+                        <form class="priem__form" method="post" action="https://slavgorod.ru/priemadd/" enctype="multipart/form-data">
+                            <label class="form-label" for="select-whom">Кому адресовано обращение: *</label>
+                            <select id="select-whom" name="whom_id" class="form-select">
                                 <option value="1" selected>Л.В. Подгора - Глава города</option>
                                 <option value="2">Е.В. Нестеренко - Заместитель главы администрации</option>
                                 <option value="3">Е.Э. Радионова - Заместитель главы администрации</option>
                                 <option value="4">Е.П. Князева - Заместитель главы администрации</option>
                             </select>
-                            <label for="nik">Фамилия, имя, отчество:*</label>
+                            <label class="form-label" for="nik">Фамилия, имя, отчество:*</label>
                             <input type="text" id="nik" name="nik" maxlength="50" value="">
-                            <label for="adr_index">Почтовый индекс: *</label>
+                            <label class="form-label" for="adr_index">Почтовый индекс: *</label>
                             <input type="text" id="adr_index" name="adr_index" maxlength="6" value="">
-                            <label for="select_region">Регион: *</label>
-                            <select id="select_region" name="adr_region" class="select__item">
+                            <label class="form-label" for="select_region">Регион: *</label>
+                            <select id="select_region" name="adr_region" class="form-select">
                                 <option value="Алтайский край" selected>Алтайский край</option>
                                 <option value="Москва">Москва</option>
                                 <option value="Санкт-Петербург">Санкт-Петербург</option>
@@ -696,19 +696,19 @@
                                 <option value="Прочие регионы">Прочие регионы</option>
                             </select>
 
-                            <label for="adr_punkt">Населенный пункт: *</label>
+                            <label class="form-label" for="adr_punkt">Населенный пункт: *</label>
                             <input type="text" id="adr_punkt" name="adr_punkt" maxlength="50" value="">
 
-                            <label for="adr_dom">Улица, номер дома, квартиры: *</label>
+                            <label class="form-label" for="adr_dom">Улица, номер дома, квартиры: *</label>
                             <input type="text" id="adr_dom" name="adr_dom" maxlength="50" value="">
 
-                            <label for="email">Ваш e-mail:</label>
+                            <label class="form-label" for="email">Ваш e-mail:</label>
                             <input id="email" type="text" name="email" maxlength="200" value=""><span id="valid"></span>
 
-                            <label for="tel">Телефон (только цифры):</label>
+                            <label class="form-label" for="tel">Телефон (только цифры):</label>
                             <input id="tel" type="text" name="tel" maxlength="15" value=""><span id="valid_tel"></span>
 
-                            <label for="status">Статус заявителя:</label>
+                            <label class="form-label" for="status">Статус заявителя:</label>
                             <select id="status" name="status" class="select__item">
                                 <option value=""></option>
                                 <option value="Инвалид">Инвалид</option>
@@ -726,7 +726,7 @@
                                 <option value="Другой">Другой</option>
                             </select>
 
-                            <label for="attachment">Загрузить файл: </label>
+                            <label class="form-label" for="attachment">Загрузить файл: </label>
                             <input type="file" id="attachment" size="40"
                                 accept="image/*,video/*,audio/*,text/plain,application/pdf,application/msword,application/powerpoint,application/rtf,application/excel"
                                 name="uploadfile" value="" class="inputfile" />
@@ -736,7 +736,7 @@
                                 Для вложений допустимы следующие форматы файлов: gif, jpg, png, jpeg, pdf, doc, tiff,
                                 docx, txt, rtf, xls, xlsx, bmp, ppt, mp3, mp4, avi, 3gp, wma)</p>
 
-                            <label for="vopros">Текст Вашего Обращения: *</label>
+                            <label class="form-label" for="vopros">Текст Вашего Обращения: *</label>
                             <textarea id="vopros" name="vopros" rows="6"></textarea>
 
                             <p>Защита от спама.</p>
