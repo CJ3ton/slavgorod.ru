@@ -511,12 +511,12 @@
                     <div class="main__docsearch-title"><i class="fas fa-search icon-left"></i>Поиск<i class="fas fa-chevron-down icon-right"></i></div>
                     <div class="main__docsearch-block">
                         <form class="doc-filter" method="post" action="/docum/">
-                            <div class="doc-filter__input">
+                            <div class="form-input">
                                 <label class="form-label" for="search_data">Дата документа:</label>
                                 <input class="jq" type="text" autocomplete="off" name="date" id="search_data">
                             </div>
         
-                            <div class="doc-filter__input">
+                            <div class="form-input">
                                 <label class="form-label" for="search_type">Тип документа:</label>
                                 <select id="search_type" name="type">
                                     <option value="">Любой</option>
@@ -525,7 +525,7 @@
                                     <option value="7">Распоряжение</option>
                                 </select>
                             </div>
-                            <div class="doc-filter__input">
+                            <div class="form-input">
                                 <label class="form-label" for="search_num">№ документа:</label>
                                 <input type="text" autocomplete="off" name="doc_num" id="search_num">
                             </div>
@@ -533,8 +533,8 @@
                                 <label class="form-label" for="search_txt">Текст:</label>
                                 <input type="text" name="doc_text" id="search_txt" value="">
                             </div>
-                            <input class="doc-filter__submit" type="submit" name="view" value="Искать" id="search_submit">
-                            <input class="doc-filter__submit" type="reset" value="Сбросить" id="doc-filter__reset">
+                            <input class="form-submit" type="submit" name="view" value="Искать" id="search_submit">
+                            <input class="form-submit" type="reset" value="Сбросить" id="form-reset">
                             <input type="hidden" name="search" value="close">
                         </form>
                     </div>
@@ -1087,6 +1087,7 @@
     <div class="overlay"></div>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
+    <script src="js/js.cookie.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
     <script src="js/script.js"></script>

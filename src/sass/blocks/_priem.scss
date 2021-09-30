@@ -15,6 +15,7 @@
 
     &__list {
         margin: 0 25px;
+
         & li {
             margin: 10px 5px;
         }
@@ -22,5 +23,13 @@
 
     p {
         margin: 10px 0;
+    }
+
+    &__form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+        row-gap: 15px;
+        
     }
 }
