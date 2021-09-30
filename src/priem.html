@@ -603,15 +603,15 @@
                                 </div>
                                 <div class="form-input">
                                     <label class="form-label" for="nik">Фамилия, имя, отчество:*</label>
-                                    <input type="text" id="nik" name="nik" maxlength="50" value="">
+                                    <input type="text" id="fio" name="fio" maxlength="50" value="" required>
                                 </div>
                                 <div class="form-input">
                                     <label class="form-label" for="adr_index">Почтовый индекс: *</label>
-                                    <input type="text" id="adr_index" name="adr_index" maxlength="6" value="">
+                                    <input type="text" id="adr_index" name="adr_index" maxlength="6" value="" required>
                                 </div>
                                 <div class="form-input">
                                     <label class="form-label" for="select_region">Регион: *</label>
-                                    <select id="select_region" name="adr_region" class="form-select">
+                                    <select id="select_region" name="adr_region" class="form-select" required>
                                         <option value="Алтайский край" selected>Алтайский край</option>
                                         <option value="Москва">Москва</option>
                                         <option value="Санкт-Петербург">Санкт-Петербург</option>
@@ -727,12 +727,12 @@
 
                                 <div class="form-input">
                                     <label class="form-label" for="adr_punkt">Населенный пункт: *</label>
-                                    <input type="text" id="adr_punkt" name="adr_punkt" maxlength="50" value="">
+                                    <input type="text" id="adr_punkt" name="adr_punkt" maxlength="50" value="" required>
                                 </div>
 
                                 <div class="form-input">
                                     <label class="form-label" for="adr_dom">Улица, номер дома, квартиры: *</label>
-                                    <input type="text" id="adr_dom" name="adr_dom" maxlength="50" value="">
+                                    <input type="text" id="adr_dom" name="adr_dom" maxlength="50" value="" required>
                                 </div>
 
                                 <div class="form-input">
@@ -774,23 +774,25 @@
                                         name="uploadfile" value="" class="form-file" />
                                 </div>
 
-                                <div class="form-text">
+                                <div class="form-text form-input-fullwidth fz14">
                                     (Вы можете приложить дополнительные документы или материалы в электронной форме,
                                     более полно раскрывающие суть Вашего обращения. Размер файла вложения не может
                                     превышать 5 Мб. Для вложений допустимы следующие форматы файлов: gif, jpg, png,
                                     jpeg, pdf, doc, tiff, docx, txt, rtf, xls, xlsx, bmp, ppt, mp3, mp4, avi, 3gp, wma)
                                 </div>
 
-                                <div class="form-input">
+                                <div class="form-input form-input-fullwidth">
                                     <label class="form-label" for="vopros">Текст Вашего Обращения: *</label>
-                                    <textarea id="vopros" name="vopros" rows="6"></textarea>
+                                    <textarea id="vopros" name="vopros" rows="5"></textarea>
                                 </div>
 
                                 <div class="form-text">Защита от спама.</div>
 
-                                <div class="form-recaptcha" data-sitekey="6LcPNewSAAAAAI5LiQH_Zyx3qSAi-g4I8hQEoHrp"></div>
+                                <div class="form-recaptcha" data-sitekey="6LcPNewSAAAAAI5LiQH_Zyx3qSAi-g4I8hQEoHrp">
+                                </div>
 
-                                <div class="form-text">Информация о персональных данных авторов обращений, направленных в электронном виде,
+                                <div class="form-text">Информация о персональных данных авторов обращений, направленных
+                                    в электронном виде,
                                     хранится и обрабатывается с соблюдением <a target="_blank"
                                         href="http://ivo.garant.ru/#/document/12148567:0">требований российского
                                         законодательства о персональных данных.</a></div>
@@ -1143,6 +1145,7 @@
     <div class="overlay"></div>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/js.cookie.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>

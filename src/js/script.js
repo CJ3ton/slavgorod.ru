@@ -232,4 +232,34 @@ jQuery(document).ready(function ($) {
         $(this).next().slideToggle();
         $(this).toggleClass('open');
     });
+});
+
+function validateForm(form) {
+    $(form).validate({
+        rules: {
+            fio: {
+                required: true,
+                minlength: 2
+            },
+            phone: "required",
+            email: {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            fio: {
+                required: "Пожалуйста, введите свое имя!",
+                minlength: jQuery.validator.format("Введите не менее {0} символов!")
+            },
+            phone: "Пожалуйста, введите свой номер телефона",
+            email: {
+                required: "Пожалуйста, введите свой email",
+                email: "Ваш email должен соответствовать формату name@domain.com"
+            }
+        }
+
     });
+}
+
+validateForm('.priem__form');
