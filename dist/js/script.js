@@ -93,8 +93,14 @@ $(document).ready(function () {
         $.datepicker.setDefaults($.datepicker.regional.ru);
     });
 
+    $('.spoiler__title').click(function () {
+        $(this).next().slideToggle();
+        $(this).toggleClass('open');
+    });
+
     initMenu();
     searchShow();
+    validateForm('.priem__form');
 
 });
 
@@ -168,14 +174,6 @@ function searchShow() {
     );
 }
 
-jQuery(document).ready(function ($) {
-    $('.spoiler__body').hide();
-    $('.spoiler__title').click(function () {
-        $(this).next().slideToggle();
-        $(this).toggleClass('open');
-    });
-});
-
 function validateForm(form) {
     $(form).validate({
         rules: {
@@ -183,10 +181,19 @@ function validateForm(form) {
                 required: true,
                 minlength: 2
             },
-            phone: "required",
+            tel: {
+                required: true
+            },
+            adr_index: {
+                digits: true,
+                minlength: 6
+            },
             email: {
                 required: true,
                 email: true
+            },
+            vopros: {
+                required: true
             }
         },
         messages: {
@@ -194,14 +201,17 @@ function validateForm(form) {
                 required: "Пожалуйста, введите свое имя!",
                 minlength: jQuery.validator.format("Введите не менее {0} символов!")
             },
-            tel: "Пожалуйста, введите свой номер телефона",
+            tel: {
+                required: "Пожалуйста, введите свой номер телефона"
+            },
             email: {
                 required: "Пожалуйста, введите свой email!",
                 email: "Ваш email должен соответствовать формату name@domain.com"
             },
             adr_index: {
-                number: true,
-                required: "Пожалуйста, введите почтовый индекс!"
+                digits: "Только цифры!",
+                required: "Пожалуйста, введите почтовый индекс!",
+                minlength: "Введите 6 цифр!"
             },
             adr_punkt: {
                 required: "Пожалуйста, введите название населенного пункта!"
@@ -210,10 +220,26 @@ function validateForm(form) {
                 number: true,
                 required: "Пожалуйста, введите адрес (улица, дом, квартира)!"
             },
+            vopros: {
+                required: "Пожалуйста, введите текст обращения!"
+            }
         }
 
     });
 }
 
-validateForm('.priem__form');
-$('input[name=tel]').mask("+7 (999) 999-99-99");
+$('input[name=tel]').mask("+7 (999) 999-99-99"); // Mask for phone input field
+
+// ***AJAX mail sender*** //
+$('.priem__form').submit(function (e) {
+    e.preventDefault();
+    $.ajax({
+        type: "POST",
+        url: "modules/mailer/smart.php",
+        data: $(this).serialize()
+    }).done(function () {
+        $(this).find('input').val("");
+        $('form').trigger('reset');
+    });
+    return false;
+});

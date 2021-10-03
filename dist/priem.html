@@ -742,7 +742,7 @@
 
                                 <div class="form-input">
                                     <label class="form-label" for="tel">Телефон (только цифры):</label>
-                                    <input id="tel" type="text" name="tel" maxlength="15" value="">
+                                    <input id="tel" type="text" name="tel" value="">
                                 </div>
 
                                 <div class="form-input">
@@ -767,6 +767,11 @@
                                     </select>
                                 </div>
 
+                                <div class="form-input form-input-fullwidth">
+                                    <label class="form-label" for="vopros">Текст Вашего Обращения: *</label>
+                                    <textarea id="vopros" name="vopros" rows="5"></textarea>
+                                </div>
+
                                 <div class="form-input ">
                                     <label class="form-label" for="attachment">Загрузить файл: </label>
                                     <input type="file" id="attachment" size="40"
@@ -781,23 +786,22 @@
                                     jpeg, pdf, doc, tiff, docx, txt, rtf, xls, xlsx, bmp, ppt, mp3, mp4, avi, 3gp, wma)
                                 </div>
 
-                                <div class="form-input form-input-fullwidth">
-                                    <label class="form-label" for="vopros">Текст Вашего Обращения: *</label>
-                                    <textarea id="vopros" name="vopros" rows="5"></textarea>
+                                <div class="form-text form-input-fullwidth fz14">Защита от спама.
+                                    <div class="form-recaptcha" data-sitekey="6LcPNewSAAAAAI5LiQH_Zyx3qSAi-g4I8hQEoHrp">
+                                        <img src="img/recaptcha.png" alt="">
+                                    </div>
                                 </div>
 
-                                <div class="form-text">Защита от спама.</div>
-
-                                <div class="form-recaptcha" data-sitekey="6LcPNewSAAAAAI5LiQH_Zyx3qSAi-g4I8hQEoHrp">
-                                </div>
-
-                                <div class="form-text form-input-fullwidth fz14">Информация о персональных данных авторов обращений, направленных
+                                <div class="form-text form-input-fullwidth fz14">Информация о персональных данных
+                                    авторов обращений, направленных
                                     в электронном виде,
                                     хранится и обрабатывается с соблюдением <a target="_blank"
                                         href="http://ivo.garant.ru/#/document/12148567:0">требований российского
                                         законодательства о персональных данных.</a></div>
 
-                                <input class="button__submit" id="send" type="submit" name="submit" value="Отправить">
+                                <input class="form-submit btn-small" id="send" type="submit" name="submit"
+                                    value="Отправить">
+                                <div class="status success">Ваше обращение успешно отправлено!</div>
                             </form>
                         </div>
 

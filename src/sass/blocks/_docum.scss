@@ -26,10 +26,12 @@
                 transform: rotate(180deg);
             }
         }
+
         &-block {
             height: 0;
             overflow: hidden;
             transition: all, .5s;
+
             &.open {
                 height: 190px;
             }
@@ -55,28 +57,14 @@
         grid-column-start: 1;
         grid-column-end: 4;
     }
-
-    &__submit {
-        border: solid 2px $main-color;
-        color: $main-color;
-        background-color: #fff;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all .3s;
-
-        &:hover {
-            color: #fff;
-            background-color: $main-color;
-        }
-    }
 }
 
 .fa.fa-file-pdf-o.fa-lg {
-	margin-left: 10px;
+    margin-left: 10px;
 }
 
 .fa-file-pdf-o::before {
-	content: "\f1c1";
+    content: "\f1c1";
 }
 
 .fa-lg {

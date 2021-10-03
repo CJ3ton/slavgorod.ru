@@ -17,6 +17,19 @@
             grid-column: 1 / 3;
         }
     }
+    &-submit {
+        border: solid 2px $main-color;
+        color: $main-color;
+        background-color: #fff;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all .3s;
+
+        &:hover {
+            color: #fff;
+            background-color: $main-color;
+        }
+    }
 }
 
 input,
@@ -35,6 +48,23 @@ label.error {
 	color: #f00;
 }
 
-input.error {
+input.error, textarea.error {
     border-color: #f00;
+    outline: none;
+}
+
+textarea {
+    padding: 5px 8px;
+}
+
+.btn-small {
+    width: 200px;
+}
+
+.status.success {
+	color: #24854e;
+}
+
+.status.error {
+    color: #f00;
 }

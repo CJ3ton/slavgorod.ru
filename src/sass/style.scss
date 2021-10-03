@@ -1,4 +1,4 @@
-@import 'libs/_reseter.min.css';
+@import 'libs/reseter.min';
 
 @import 'base/variables';
 @import 'libs/slick';
@@ -61,6 +61,13 @@ h1 {
     font-weight: 500;
     color: $main-color;
     padding: 0 10px;
+}
+
+a {
+    color: $main-color;
+    &:hover {
+        color: $sec-color;
+    }
 }
 
 .fz12 {
@@ -143,6 +150,7 @@ h1 {
         padding: 0 10px;
         border: 1px solid #ddd;
         margin: 0 10px 20px;
+        display: none;
     }
 }
 
