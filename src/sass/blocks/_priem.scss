@@ -39,3 +39,13 @@
     width: 100%;
     resize: vertical;
 }
+
+#send:disabled {
+    color: #aaa;
+    border-color: #aaa;
+    &:hover {
+        color: #aaa;
+        background-color: #fff;
+        cursor: initial;
+    }
+}
