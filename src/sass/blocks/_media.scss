@@ -416,11 +416,15 @@
 @media (max-width: 480px) {
     .doc-filter {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 40px);
+        grid-template-rows: repeat(6, 40px);
         &__text {
             grid-column: unset;
         }
 
+    }
+
+    .main__docsearch-block.open {
+        height: 360px;
     }
 
 }
