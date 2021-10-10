@@ -11,12 +11,15 @@
         top: -9px;
         left: 10px;
     }
+
     &-input {
         position: relative;
+
         &-fullwidth {
             grid-column: 1 / 3;
         }
     }
+
     &-submit {
         border: solid 2px $main-color;
         color: $main-color;
@@ -41,14 +44,15 @@ select {
 
 label.error {
     font-size: 14px;
-	z-index: 10;
-	left: 15px;
-	bottom: 50%;
-	transform: translateY(50%);
-	color: #f00;
+    z-index: 10;
+    left: 15px;
+    bottom: 50%;
+    transform: translateY(50%);
+    color: #f00;
 }
 
-input.error, textarea.error {
+input.error,
+textarea.error {
     border-color: #f00;
     outline: none;
 }
@@ -61,10 +65,15 @@ textarea {
     width: 200px;
 }
 
-.status.success {
-	color: #24854e;
+.status {
+    font-size: 13px;
+    line-height: 40px;
+    // text-align: center;
+    &.success {
+        color: #24854e;
+    }
+    &.error {
+        color: #f00;
+    }
 }
 
-.status.error {
-    color: #f00;
-}

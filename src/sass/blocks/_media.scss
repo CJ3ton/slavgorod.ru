@@ -84,6 +84,10 @@
         display: none;
     }
 
+    .priem__form {
+        grid-template-rows: repeat(5, minmax(40px, auto)) minmax(120px, auto) 45px 70px 100px 60px 40px;
+    }
+
     .footer {
         padding: 35px 15px;
         font-size: 14px;
@@ -367,6 +371,10 @@
         opacity: 0;
     }
 
+    .status {
+        line-height: 20px;
+    }
+
 }
 
 @media (max-width: 576px) {
@@ -410,6 +418,36 @@
         }
     }
 
+    .priem__form {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, minmax(40px, auto)) 105px 40px minmax(80px, auto) 100px minmax(60px, auto) 40px 40px;
+    }
+
+    #send {
+        justify-self: center;
+    }
+
+    .form-input-fullwidth {
+        grid-column: unset;
+    }
+
+    .status {
+        text-align: center;
+    }
+
+    .spoiler {
+        &__title {
+            margin: 10px 0 0;
+
+            & h2 {
+                font-size: 15px;
+            }
+        }
+        &__body {
+            margin: 0 0px 20px;
+        }
+
+    }
 
 }
 
@@ -417,6 +455,7 @@
     .doc-filter {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 40px);
+
         &__text {
             grid-column: unset;
         }
