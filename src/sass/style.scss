@@ -151,6 +151,20 @@ a {
     }
 }
 
+.panel_buttons {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 10px;
+}
+
+.p_button, .p_button.wide_center {
+	text-align: center;
+	padding: 5px;
+	border: 1px solid;
+	text-decoration: none;
+}
+
 @import 'blocks/header';
 @import 'blocks/main';
 @import 'blocks/left-sidebar';
