@@ -17,9 +17,9 @@ $mail->Username = 'hgfh@hgfht.ru';                 // Наш логин
 $mail->Password = '9659796499';                           // Наш пароль от ящика
 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 25;                                    // TCP port to connect to
- 
+
 $mail->setFrom('fghfn@fghfh.ru', 'Pulse');   // От кого письмо 
-$mail->addAddress('fhfgh@fghfgh.ru');     // Add a recipient
+$mail->addAddress('fhfgh@fghfghgi.ru');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
