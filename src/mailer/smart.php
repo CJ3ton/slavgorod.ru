@@ -11,15 +11,15 @@ $mail->CharSet = 'utf-8';
 $mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.sibnet.ru';  // Specify main and backup SMTP servers
+$mail->Host = 'smtp.yuiyui.ru';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = '3ton@sibnet.ru';                 // Наш логин
-$mail->Password = 'bhnjmkLp09';                           // Наш пароль от ящика
+$mail->Username = '8768on@ytutyt.ru';                 // Наш логин
+$mail->Password = '78968909';                           // Наш пароль от ящика
 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 25;                                    // TCP port to connect to
  
-$mail->setFrom('3ton@sibnet.ru', 'Pulse');   // От кого письмо 
-$mail->addAddress('dekoder@inbox.ru');     // Add a recipient
+$mail->setFrom('hghn@sjhjt.ru', 'Pulse');   // От кого письмо 
+$mail->addAddress('jhgjg@hgjhgj.ru');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
