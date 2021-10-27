@@ -7,9 +7,10 @@
 /coverage
 
 # production
-/build
+/dist
 
 # misc
+/src/mailer
 .DS_Store
 .env.local
 .env.development.local
