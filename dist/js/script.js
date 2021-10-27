@@ -8,7 +8,11 @@ const hamburger = document.querySelector('.hamburger'),
     searchType = document.querySelector('#search_type'),
     searchNum = document.querySelector('#search_num'),
     searchTxt = document.querySelector('#search_txt'),
-    docFilterReset = document.querySelector('#doc-filter__reset');
+    docFilterReset = document.querySelector('#doc-filter__reset'),
+    msg = document.querySelector('#msg'),
+    msgClose = document.querySelector('.messages__close'),
+    msgWindow = document.querySelector('.messages');
+
 
 $(document).ready(function () {
     $('.main__slider').slick({
@@ -61,6 +65,20 @@ $(document).ready(function () {
         ]
     });
 
+    $('.messages__slider').slick({
+        slidesToShow: 1,
+        fade: true,
+        speed: 500,
+        autoplay: false,
+        arrows: true,
+        swipeToSlide: true,
+        dots: true,
+        adaptiveHeight: true,
+        slide: '.messages__item',
+        prevArrow: '<button type="button" class="message-prev"><i class="fas fa-angle-left"></i></button>',
+        nextArrow: '<button type="button" class="message-next"><i class="fas fa-angle-right"></i></button>'
+    });
+
     $("#search_data").datepicker();
     jQuery(function ($) {
         $.datepicker.regional.ru = {
@@ -100,8 +118,6 @@ $(document).ready(function () {
 
     initMenu();
     searchShow();
-    validateForm('.priem__form');
-
 });
 
 function initMenu() {
@@ -130,6 +146,18 @@ menuItem.forEach(item => {
     item.addEventListener('click', () => {
         menu.classList.remove('open');
     });
+});
+
+msg.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    $('.messages__slider').slick('setPosition');
+    overlay.classList.toggle('active');
+    msgWindow.classList.toggle('open');
+});
+
+msgClose.addEventListener('click', () => {
+    overlay.classList.toggle('active');
+    msgWindow.classList.toggle('open');
 });
 
 if (docFilterReset) {
@@ -173,73 +201,3 @@ function searchShow() {
         }
     );
 }
-
-function validateForm(form) {
-    $(form).validate({
-        rules: {
-            fio: {
-                required: true,
-                minlength: 2
-            },
-            tel: {
-                required: true
-            },
-            adr_index: {
-                digits: true,
-                minlength: 6
-            },
-            email: {
-                required: true,
-                email: true
-            },
-            vopros: {
-                required: true
-            }
-        },
-        messages: {
-            fio: {
-                required: "Пожалуйста, введите свое имя!",
-                minlength: jQuery.validator.format("Введите не менее {0} символов!")
-            },
-            tel: {
-                required: "Пожалуйста, введите свой номер телефона"
-            },
-            email: {
-                required: "Пожалуйста, введите свой email!",
-                email: "Ваш email должен соответствовать формату name@domain.com"
-            },
-            adr_index: {
-                digits: "Только цифры!",
-                required: "Пожалуйста, введите почтовый индекс!",
-                minlength: "Введите 6 цифр!"
-            },
-            adr_punkt: {
-                required: "Пожалуйста, введите название населенного пункта!"
-            },
-            adr_dom: {
-                number: true,
-                required: "Пожалуйста, введите адрес (улица, дом, квартира)!"
-            },
-            vopros: {
-                required: "Пожалуйста, введите текст обращения!"
-            }
-        }
-
-    });
-}
-
-$('input[name=tel]').mask("+7 (999) 999-99-99"); // Mask for phone input field
-
-// ***AJAX mail sender*** //
-$('.priem__form').submit(function (e) {
-    e.preventDefault();
-    $.ajax({
-        type: "POST",
-        url: "modules/mailer/smart.php",
-        data: $(this).serialize()
-    }).done(function () {
-        $(this).find('input').val("");
-        $('form').trigger('reset');
-    });
-    return false;
-});

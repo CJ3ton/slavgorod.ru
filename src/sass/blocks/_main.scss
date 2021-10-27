@@ -6,6 +6,7 @@
 
     &__left {
         width: 265px;
+
         &-weather {
             padding: 10px 23px;
         }
@@ -15,4 +16,28 @@
         width: 610px;
     }
 
+}
+
+.messages {
+    visibility: hidden;
+    width: 500px;
+    min-height: 100px;
+    padding: 40px 20px 10px;
+    background-color: #fff;
+    position: absolute;
+    left: -100%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    &__close {
+        font-size: 28px;
+        position: absolute;
+        right: 10px;
+        top: 8px;
+        cursor: pointer;
+    }
+    &.open {
+        visibility: visible;
+        left: 50%;
+    }
 }

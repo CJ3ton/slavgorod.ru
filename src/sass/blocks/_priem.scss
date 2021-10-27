@@ -28,7 +28,7 @@
     &__form {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(5, minmax(40px, auto)) minmax(120px, auto) 45px 70px 100px repeat(2, 40px);
+        grid-template-rows: repeat(5, minmax(40px, auto)) minmax(120px, auto) minmax(45px, auto) 70px 100px repeat(2, 40px);
         column-gap: 10px;
         row-gap: 15px;
         

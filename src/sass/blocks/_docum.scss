@@ -59,12 +59,16 @@
     }
 }
 
-.fa.fa-file-pdf-o.fa-lg {
+.fa.fa-file-pdf-o.fa-lg, .fa.fa-file-photo-o.fa-lg, .fa.fa-file-picture-o.fa-lg, .fa.fa-file-image-o.fa-lg {
     margin-left: 10px;
 }
 
 .fa-file-pdf-o::before {
     content: "\f1c1";
+}
+
+.fa-file-photo-o::before, .fa-file-picture-o::before, .fa-file-image-o::before {
+	content: "\f1c5";
 }
 
 .fa-lg {
