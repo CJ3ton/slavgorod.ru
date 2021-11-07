@@ -419,6 +419,10 @@
         }
     }
 
+    .search__text {
+        width: calc(100% - 70px);
+    }
+
     .single {
         &__content {
             &-article {

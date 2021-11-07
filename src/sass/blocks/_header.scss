@@ -112,6 +112,16 @@
         cursor: pointer;
         position: relative;
 
+        &.icon-disabled {
+            cursor: default;
+
+            &:hover {
+                svg path {
+                    fill: #fff;
+                }
+            }
+        }
+
         &:hover {
             svg path {
                 fill: $sec-color;
@@ -161,4 +171,8 @@
     font-size: 16px;
     padding: 0px 18px;
     border: none;
+}
+
+#msg.icon-disabled svg path {
+	fill: #bbb;
 }
