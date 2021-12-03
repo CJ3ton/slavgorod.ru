@@ -148,12 +148,14 @@ menuItem.forEach(item => {
     });
 });
 
+if (msg){
 msg.addEventListener('click', (evt) => {
     evt.preventDefault();
     $('.messages__slider').slick('setPosition');
     overlay.classList.toggle('active');
     msgWindow.classList.toggle('open');
 });
+}
 
 msgClose.addEventListener('click', () => {
     overlay.classList.toggle('active');
