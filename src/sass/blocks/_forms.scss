@@ -78,3 +78,22 @@ textarea {
     }
 }
 
+.ya-site-form__input-text {
+	border-radius: 4px;
+}
+
+#ya-site-form0 .ya-site-form__form .ya-site-form__input-text {
+    width: 255px;
+    height: 24px;
+    padding: 0 18px;
+    font-size: 16px !important;
+    margin-right: 15px !important;
+}
+
+.ya-site-form__search-input-layout-r>input[type=button].ya-site-form__submit.ya-site-form__submit_type_image {
+    width: 48px !important;
+	height: 24px !important;
+	background: url('/icons/search.png') center center no-repeat #fff !important;
+	border-radius: 4px;
+}
+

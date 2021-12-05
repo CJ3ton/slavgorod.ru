@@ -74,6 +74,23 @@
                 & p {
                     margin-top: 10px;
                 }
+
+                table, table.tbl {
+                    border-collapse: collapse;
+                }
+
+                td {
+                    border: 1px solid #ddd;
+                    padding: 5px;
+                }
+
+                tr:nth-child(odd) {
+                    background-color: #fff;
+                }
+
+                tr:nth-child(even) {
+                    background-color: #eee;
+                }
             }
 
             &-sign {
