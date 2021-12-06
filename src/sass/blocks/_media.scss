@@ -419,10 +419,6 @@
         }
     }
 
-    .search__text {
-        width: calc(100% - 70px);
-    }
-
     .single {
         &__content {
             &-article {
@@ -438,6 +434,10 @@
 
                 &-photorep {
                     grid-template-columns: 100%;
+                }
+
+                &-text {
+                    overflow-x: scroll;
                 }
             }
         }
@@ -478,6 +478,10 @@
     .messages {
         width: 90%;
         margin: 0 auto;
+    }
+
+    #ya-site-form0 .ya-site-form__form .ya-site-form__input-text {
+        width: calc(100% - 10px);
     }
 
 }

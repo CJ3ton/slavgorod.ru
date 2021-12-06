@@ -77,11 +77,26 @@
 
                 table, table.tbl {
                     border-collapse: collapse;
+                    width: 100%;
+                    width: -moz-available;
+                    width: -webkit-fill-available; 
+                    width: stretch;
                 }
 
-                td {
+                table tbody, table.tbl tbody {
+                    border: 2px solid #0f4c81;
+                }
+
+                td, th {
                     border: 1px solid #ddd;
                     padding: 5px;
+                }
+
+                th {
+                    font-size: 14px;
+                    font-weight: 500;
+                    background-color: #0f4c81;
+                    color: #fff;
                 }
 
                 tr:nth-child(odd) {
@@ -90,6 +105,13 @@
 
                 tr:nth-child(even) {
                     background-color: #eee;
+                }
+
+                tr:first-child {
+                    text-align: center;
+                    background-color: #0f4c81;
+                    color: #fff;
+                    // border: 2px solid #0f4c81;
                 }
             }
 
