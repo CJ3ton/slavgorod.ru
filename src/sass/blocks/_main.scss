@@ -29,12 +29,19 @@
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 100;
+    border-radius: 4px;
     &__close {
         font-size: 28px;
         position: absolute;
         right: 10px;
-        top: 8px;
+        top: 3px;
         cursor: pointer;
+        & i {
+            color: $main-color;
+        }
+        &:hover i {
+            color: $sec-color;
+        }
     }
     &.open {
         visibility: visible;
