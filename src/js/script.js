@@ -20,8 +20,8 @@ $(document).ready(function () {
         autoplay: true,
         dots: true,
         slide: '.main__slider-slide',
-        prevArrow: '<button type="button" class="slick-prev"><img src="icons/arrow-left.svg" alt="Prev"</button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="icons/arrow-right.svg" alt="Next"</button>',
+        prevArrow: '<button type="button" class="slick-prev"><img src="icons/arrow-left.svg" alt="Prev"></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="icons/arrow-right.svg" alt="Next"></button>',
         responsive: [{
             breakpoint: 768,
             settings: {
