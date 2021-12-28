@@ -89,3 +89,84 @@
     justify-content: center;
     margin-top: 30px;
 }
+
+.bg {
+    &-1 {
+        background: url('../icons/icons.png') -0 -0;
+    }
+    &-2 {
+        background: url('../icons/icons.png') -98px -0;
+    }
+    &-3 {
+        background: url('../icons/icons.png') -0 -60px;
+    }
+    &-4 {
+        background: url('../icons/icons.png') -98px -60px;
+    }
+    &-5 {
+        background: url('../icons/icons.png') -0 -120px;
+    }
+    &-6 {
+        background: url('../icons/icons.png') -98px -120px;
+    }
+    &-7 {
+        background: url('../icons/icons.png') -196px -0;
+    }
+    &-8 {
+        background: url('../icons/icons.png') -196px -60px;
+    }
+    &-9 {
+        background: url('../icons/icons.png') -196px -120px;
+    }
+    &-10 {
+        background: url('../icons/icons.png') -0 -180px;
+    }
+    &-11 {
+        background: url('../icons/icons.png') -98px -180px;
+    }
+    &-12 {
+        background: url('../icons/icons.png') -196px -180px;
+    }
+    &-13 {
+        background: url('../icons/icons.png') -294px -0;
+    }
+    &-14 {
+        background: url('../icons/icons.png') -294px -60px;
+    }
+    &-15 {
+        background: url('../icons/icons.png') -294px -120px;
+    }
+    &-16 {
+        background: url('../icons/icons.png') -294px -180px;
+    }
+    &-17 {
+        background: url('../icons/icons.png') -0 -240px;
+    }
+    &-18 {
+        background: url('../icons/icons.png') -98px -240px;
+    }
+    &-19 {
+        background: url('../icons/icons.png') -196px -240px;
+    }
+    &-20 {
+        background: url('../icons/icons.png') -294px -240px;
+    }
+    &-21 {
+        background: url('../icons/icons.png') -0 -300px;
+    }
+    &-22 {
+        background: url('../icons/icons.png') -98px -300px;
+    }
+    &-23 {
+        background: url('../icons/icons.png') -196px -300px;
+    }
+    &-24 {
+        background: url('../icons/icons.png') -294px -300px;
+    }
+    &-25 {
+        background: url('../icons/icons.png') -392px -0;
+    }
+    &-26 {
+        background: url('../icons/icons.png') -392px -60px;
+    }
+}
